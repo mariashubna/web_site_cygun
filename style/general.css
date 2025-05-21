@@ -1,0 +1,76 @@
+:root {
+  --main_font: "Montserrat", serif;
+  --second_font: "Mulish", sans-serif;
+  --btn_background_color: linear-gradient(30deg, #002c43 0%, #0070aa 100%);
+  --block_backround_color: linear-gradient(
+    90deg,
+    rgba(242, 223, 207, 0.39) 0%,
+    rgba(228, 177, 134, 0.39) 100%
+  );
+  --block_backround_color_form: linear-gradient(
+    180deg,
+    rgba(242, 223, 207, 0.39) 0%,
+    rgba(228, 177, 134, 0.39) 100%
+  );
+  --block_backround_color_footer: linear-gradient(
+    0deg,
+    rgba(242, 223, 207, 0.39) 0%,
+    rgba(228, 177, 134, 0.39) 100%
+  );
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 430px) {
+  .container {
+    max-width: 430px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1152px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
