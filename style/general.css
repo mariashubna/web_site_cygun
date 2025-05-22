@@ -62,13 +62,14 @@ li {
 @media screen and (min-width: 834px) {
   .container {
     max-width: 834px;
+    width: 100%;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .container {
-    max-width: 1152px;
-    padding-left: 64px;
-    padding-right: 64px;
+    max-width: 1440px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
