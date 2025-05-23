@@ -722,6 +722,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-bottom: 16px;
 }
 .footer_link {
   text-decoration: underline;
@@ -793,7 +794,8 @@ form {
   z-index: 110;
   overflow: hidden;
 }
-#close_modal_policy, #close_modal_policy2 {
+#close_modal_policy,
+#close_modal_policy2 {
   font-family: var(--main_font);
   position: absolute;
   right: 25px;
@@ -893,6 +895,25 @@ form {
   color: rgb(139, 0, 0);
   text-align: center;
   margin-bottom: 20px;
+}
+
+.polyci_wrap {
+  order: 5;
+}
+.info_block {
+  order: 1;
+}
+
+.line:nth-of-type(1) {
+  order: 2;
+}
+
+.line:nth-of-type(2) {
+  order: 4;
+}
+
+.social_media_block {
+  order: 3;
 }
 
 /* adapt */
