@@ -13,7 +13,12 @@ document.getElementById("form").addEventListener("submit", function (e) {
       try {
         const result = JSON.parse(xhr.responseText);
         if (result.result === "Success") {
-          window.location.href = "https://prt.mn/7DPYKrqd_";
+          const currentPath = window.location.pathname;
+          if (currentPath === "/" || currentPath === "/index.html") {
+            window.location.href = "https://prt.mn/7DPYKrqd_";
+          } else if (currentPath === "/pages/tai_chi.html") {
+            window.location.href = "https://prt.mn/DC82FfqAwSt"; // Для page2
+          }
         } else {
           alert("Ошибка при отправке данных.");
         }
@@ -78,4 +83,36 @@ $("#overlay_two").on("click", function () {
 $(".close_modal_policy").on("click", function () {
   $("#visib_policy_two").fadeOut("fast");
   $("#overlay_two").fadeOut("fast");
+});
+
+// Слайдер на відгуки
+
+const slider = document.querySelector(".wrapp_feedback_items");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+});
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+});
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+// Заборона на копіювання тексту в відгуках
+slider.addEventListener("copy", (e) => {
+  e.preventDefault();
 });

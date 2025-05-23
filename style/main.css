@@ -1,7 +1,3 @@
-/* #wrapp_all_width_page {
-    width: 1500px;
-    margin: 0 auto;
-} */
 /* Header */
 .header {
   padding: 10px 0 8px;
@@ -27,14 +23,7 @@
   color: #d3ac8c;
   display: none;
 }
-@media screen and (min-width: 834px) {
-  .logo-text {
-    display: block;
-  }
-  .header {
-    padding: 25px 0;
-  }
-}
+
 /* btn course */
 .select_course {
   position: relative;
@@ -49,11 +38,7 @@
   border: none;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 430px) {
-  .btn_cours {
-    padding: 15px 48px;
-  }
-}
+
 .btn_cours > p {
   font-family: var(--second_font);
   font-weight: 700;
@@ -102,13 +87,6 @@
   padding: 30px 22px 78px;
 }
 
-@media screen and (min-width: 834px) {
-  .left_block {
-    max-width: 814px;
-    padding: 50px 22px;
-  }
-}
-
 .for_adapt_height {
   height: 950px;
   display: flex;
@@ -116,16 +94,7 @@
   justify-content: flex-start;
   align-items: center;
 }
-@media screen and (min-width: 346px) {
-  .for_adapt_height {
-    height: 870px;
-  }
-}
-@media screen and (min-width: 386px) {
-  .for_adapt_height {
-    height: 751px;
-  }
-}
+
 .wrapp_main_subtitle {
   font-family: var(--main_font);
   font-weight: 700;
@@ -157,24 +126,6 @@
   color: #4f596a;
 }
 
-@media screen and (min-width: 834px) {
-  .wrapp_main_subtitle {
-    font-size: 24px;
-    letter-spacing: -0.04em;
-  }
-  .wrapp_main_title {
-    font-size: 48px;
-    line-height: 1.42;
-    letter-spacing: -0.02em;
-  }
-  .wrapp_main_text {
-    font-size: 20px;
-    font-family: var(--second_font);
-  }
-  .for_adapt_height {
-    padding: 30px 127px 32px;
-  }
-}
 .block_align {
   text-align: center;
   max-width: 620px;
@@ -234,26 +185,6 @@
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 834px) {
-  .buy_course_btn {
-    width: 206px;
-    height: 66px;
-    font-size: 20px;
-  }
-  .about_btn {
-    width: 228px;
-    height: 67px;
-  }
-  .left-title {
-    font-size: 40px;
-    line-height: 1.7;
-    width: 530px;
-  }
-  .left-list {
-    padding: 0;
-    margin-bottom: 40px;
-  }
-}
 .buy_course_btn:hover {
   color: black;
   border: solid 2px #002c43;
@@ -268,17 +199,6 @@
   text-align: center;
 }
 
-@media screen and (min-width: 430px) {
-  .video_part {
-    font-size: 30px;
-    line-height: 2.12;
-  }
-}
-@media screen and (min-width: 834px) {
-  .video_part {
-    font-size: 32px;
-  }
-}
 .right_block {
   position: relative;
 }
@@ -291,16 +211,6 @@
   border-radius: 20px;
   box-shadow: 0px 32px 44px 0px #818a8c;
   top: -20px;
-}
-@media screen and (min-width: 430px) {
-  .video_placeholder {
-    max-width: 590px;
-  }
-}
-@media screen and (min-width: 834px) {
-  .video_placeholder {
-    top: -30px;
-  }
 }
 
 /* end main section */
@@ -348,6 +258,7 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin-bottom: 20px;
 }
 .second_list {
   flex-wrap: wrap;
@@ -355,11 +266,7 @@
   margin-bottom: 30px;
   justify-content: center;
 }
-@media screen and (min-width: 430px) {
-  .second_list {
-    gap: 30px 26px;
-  }
-}
+
 .block_yin > li {
   text-align: center;
   max-width: 180px;
@@ -403,61 +310,6 @@
   width: 51px;
   z-index: -1;
 }
-@media screen and (min-width: 834px) {
-  .wrapp_about_product {
-    gap: unset;
-  }
-  .wrapp_decoration_block {
-    padding: 428px 0 50px;
-  }
-  .decoration_images_left {
-    width: 288px;
-    height: 288px;
-    left: -20px;
-    top: -240px;
-  }
-  .decoration_images_right {
-    width: 84px;
-    height: 278px;
-    clip-path: inset(0 10px 0 0);
-    bottom: 236px;
-    right: -10px;
-  }
-  .about_title {
-    font-size: 40px;
-    line-height: 1.25;
-    width: 560px;
-    margin-bottom: 30px;
-  }
-  .about_text {
-    font-size: 24px;
-    line-height: 1.62;
-    margin-bottom: 50px;
-    width: 718px;
-  }
-  .block_yin {
-    margin-bottom: 15px;
-    gap: 80px;
-  }
-  .block_yin > li > img {
-    width: 70px;
-    height: 70px;
-  }
-  .block_yin > li > p {
-    font-size: 20px;
-  }
-  .block_yin > li:last-child > p {
-    width: 180px;
-  }
-  .block_text {
-    font-size: 36px;
-    line-height: 1.39;
-  }
-  .second_list {
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-}
 
 /* end about product block */
 /* about consumer */
@@ -500,26 +352,6 @@
   line-height: 1.5;
 }
 
-@media screen and (min-width: 834px) {
-  .consumer_title {
-    font-size: 40px;
-    line-height: 1.4;
-    margin-bottom: 32px;
-  }
-  .item_consumer_text {
-    padding: 20px 50px;
-  }
-  .item_consumer_text > h3 {
-    font-size: 24px;
-    line-height: 1;
-  }
-  .item_consumer_text > p {
-    width: 501px;
-  }
-  .item_consumer_text > p.consumer_text_last {
-    width: 100%;
-  }
-}
 /* end about consumer */
 /* element course */
 .block_element_course {
@@ -580,6 +412,19 @@
   overflow-x: auto;
   overflow-y: hidden;
   gap: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.wrapp_feedback_items:active {
+  cursor: grabbing;
+}
+
+.feedback::-webkit-scrollbar {
+  display: none;
 }
 .feedback_item {
   flex: 0 0 auto;
@@ -589,11 +434,6 @@
   color: white;
   border-radius: 20px;
   height: 450px;
-}
-@media screen and (min-width: 430px) {
-  .feedback_item {
-    width: 350px;
-  }
 }
 
 .feedback_item > p {
@@ -614,53 +454,14 @@
 }
 .feedback {
   font-size: 20px;
+  height: 300px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-@media screen and (min-width: 834px) {
-  .decoration_blue_image {
-    left: -80px;
-    top: -210px;
-    width: 288px;
-    height: 288px;
-    clip-path: polygon(80px 0, 100% 0, 100% 100%, 80px 100%);
-  }
-  .decoration_orange_image {
-    width: 123px;
-    height: 123px;
-    top: -40px;
-  }
-  .wrapp_about_product_down {
-    padding: 0 170px;
-  }
-  .feedback_container {
-    padding: 50px 30px;
-    max-width: 814px;
-  }
-  .feedback_item {
-    width: 550px;
-    height: 378px;
-    padding: 45px;
-  }
-  .profession {
-    margin-bottom: 30px;
-  }
-  .feedback {
-    font-size: 16px;
-    line-height: 1.87;
-    overflow-y: auto;
-    height: 100%;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-  }
-
-  .feedback::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-  .feedback_title {
-    font-size: 36px;
-    line-height: 1.56;
-    margin-bottom: 73px;
-  }
+.feedback::-webkit-scrollbar {
+  display: none;
 }
 
 /* about teacher block */
@@ -721,25 +522,6 @@
   font-size: 16px;
   line-height: 2;
   text-align: center;
-}
-@media screen and (min-width: 834px) {
-  .about_teacher_wrapp {
-    padding: 50px 0 68px;
-  }
-  .teacher_img {
-    width: 419px;
-    height: 382px;
-  }
-  .wrapp_left_block_teacher > .name_teacher {
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  .wrapp_left_block_teacher > .text_about_teacher {
-    letter-spacing: unset;
-  }
-  feedback {
-    height: 150px;
-  }
 }
 
 /* block form */
@@ -824,11 +606,7 @@ form {
   flex-direction: column;
   gap: 15px;
 }
-@media screen and (min-width: 430px) {
-  form {
-    width: 380px;
-  }
-}
+
 #name,
 #email {
   width: 100%;
@@ -897,40 +675,14 @@ form {
   background: transparent;
 }
 
-@media screen and (min-width: 834px) {
-  .right_block_form > h2 {
-    font-size: 40px;
-    line-height: 1.3;
-  }
-  .form_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .left_block_form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .last_right_deko {
-    width: 107px;
-    height: 300px;
-    right: -128px;
-    bottom: -110px;
-  }
-  .form_info {
-    width: 498px;
-  }
-}
 /* footer block */
 
 .wrapp_footer {
-  padding: 50px 0 100px;
+  padding: 50px 0 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   position: relative;
 }
 
@@ -951,11 +703,11 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 2px;
 }
 .info_block > p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   color: #000;
 }
@@ -964,12 +716,12 @@ form {
   font-family: var(--second_font);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 .footer_link {
   text-decoration: underline;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   white-space: nowrap;
 }
 .line {
@@ -1046,11 +798,380 @@ form {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* page 2 */
+.hero {
+  padding: 0 10px 50px 10px;
+}
+.wrapp_main_img {
+  background: var(--block_backround_color);
+
+  border-radius: 20px;
+  padding: 25px 20px;
+}
+.wrapp_main_img > img {
+  width: 100%;
+}
+.wrapp_text {
+  position: relative;
+}
+.decoration_images_left_page2 {
+  position: absolute;
+  z-index: -1;
+  left: -80px;
+  width: 108px;
+  top: 90px;
+  clip-path: polygon(50px 0, 100% 0, 100% 100%, 50px 100%);
+}
+.main_container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_test {
+  margin: 0 auto 50px;
+  font-family: var(--main_font);
+  width: 100%;
+}
+.main_test > h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  line-height: 1.22;
+  text-align: center;
+}
+.main_test > p {
+  width: 100%;
+  font-size: 16px;
+  line-height: 2.44;
+  text-align: center;
+}
+
+.margin_feedback {
+  padding: 100px 0;
+}
+.margin_page {
+  padding: 100px 0;
+}
+.video_tai {
+  max-width: 356px;
+  right: -456px;
+  width: 100%;
+  top: -50px;
+  height: 200px;
+}
+
+.left_text_second {
+  font-family: var(--second_font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #4f596a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about_teacher_second {
+  padding-top: 300px;
+}
+
+.left_price_second {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  width: unset;
+}
+.left_price {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(139, 0, 0);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* adapt */
+@media screen and (min-width: 346px) {
+  .for_adapt_height {
+    height: 870px;
+  }
+}
+@media screen and (min-width: 386px) {
+  .for_adapt_height {
+    height: 751px;
+  }
+}
+
+@media screen and (min-width: 430px) {
+  .btn_cours {
+    padding: 15px 48px;
+  }
+
+  form {
+    width: 380px;
+  }
+  .video_part {
+    font-size: 30px;
+    line-height: 2.12;
+  }
+
+  .video_placeholder {
+    max-width: 590px;
+  }
+  .video_tai {
+    max-width: 356px;
+  }
+  .second_list {
+    gap: 30px 26px;
+  }
+  .feedback_item {
+    width: 350px;
+  }
+
+  .main_test > p {
+    width: unset;
+  }
+  .main_container_second {
+    position: relative;
+  }
+}
+
 @media screen and (min-width: 834px) {
+  .logo-text {
+    display: block;
+  }
+  .header {
+    padding: 25px 0;
+  }
   .payment_icon {
     width: 438px;
     max-width: unset;
     height: 44px;
+  }
+  .left_block {
+    max-width: 814px;
+    padding: 50px 22px;
+  }
+  .wrapp_main_subtitle {
+    font-size: 24px;
+    letter-spacing: -0.04em;
+  }
+  .wrapp_main_title {
+    font-size: 48px;
+    line-height: 1.42;
+    letter-spacing: -0.02em;
+  }
+  .wrapp_main_text {
+    font-size: 20px;
+    font-family: var(--second_font);
+  }
+  .for_adapt_height {
+    padding: 30px 127px 32px;
+  }
+
+  .right_block_form > h2 {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+  .form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left_block_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .last_right_deko {
+    width: 107px;
+    height: 300px;
+    right: -128px;
+    bottom: -110px;
+  }
+  .form_info {
+    width: 498px;
+  }
+
+  .buy_course_btn {
+    width: 206px;
+    height: 66px;
+    font-size: 20px;
+  }
+  .about_btn {
+    width: 228px;
+    height: 67px;
+  }
+  .left-title {
+    font-size: 40px;
+    line-height: 1.7;
+    width: 530px;
+  }
+  .left-list {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .video_part {
+    font-size: 32px;
+  }
+  .video_placeholder {
+    top: -50px;
+  }
+  .wrapp_about_product {
+    gap: unset;
+  }
+  .wrapp_decoration_block {
+    padding: 428px 0 50px;
+  }
+  .decoration_images_left {
+    width: 288px;
+    height: 288px;
+    left: -20px;
+    top: -240px;
+  }
+  .decoration_images_right {
+    width: 84px;
+    height: 278px;
+    clip-path: inset(0 10px 0 0);
+    bottom: 236px;
+    right: -10px;
+  }
+  .about_title {
+    font-size: 40px;
+    line-height: 1.25;
+    width: 560px;
+    margin-bottom: 30px;
+  }
+  .about_text {
+    font-size: 24px;
+    line-height: 1.62;
+    margin-bottom: 50px;
+    width: 718px;
+  }
+  .block_yin {
+    margin-bottom: 25px;
+    gap: 80px;
+  }
+  .block_yin > li > img {
+    width: 70px;
+    height: 70px;
+  }
+  .block_yin > li > p {
+    font-size: 20px;
+  }
+  .block_yin > li:last-child > p {
+    width: 180px;
+  }
+  .block_text {
+    font-size: 36px;
+    line-height: 1.39;
+  }
+  .second_list {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .consumer_title {
+    font-size: 40px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+  .item_consumer_text {
+    padding: 20px 50px;
+  }
+  .item_consumer_text > h3 {
+    font-size: 24px;
+    line-height: 1;
+  }
+  .item_consumer_text > p {
+    width: 501px;
+  }
+  .item_consumer_text > p.consumer_text_last {
+    width: 100%;
+  }
+  .decoration_blue_image {
+    left: -80px;
+    top: -210px;
+    width: 288px;
+    height: 288px;
+    clip-path: polygon(80px 0, 100% 0, 100% 100%, 80px 100%);
+  }
+  .decoration_orange_image {
+    width: 123px;
+    height: 123px;
+    top: -40px;
+  }
+  .wrapp_about_product_down {
+    padding: 0 170px;
+  }
+  .feedback_container {
+    padding: 50px 30px;
+    max-width: 814px;
+  }
+  .feedback_item {
+    width: 550px;
+    height: 378px;
+    padding: 45px;
+  }
+  .profession {
+    margin-bottom: 30px;
+  }
+  .feedback {
+    font-size: 16px;
+    line-height: 1.87;
+    height: 100%;
+  }
+  .feedback_title {
+    font-size: 36px;
+    line-height: 1.56;
+    margin-bottom: 73px;
+  }
+  .about_teacher_wrapp {
+    padding: 50px 0 68px;
+  }
+  .teacher_img {
+    width: 419px;
+    height: 382px;
+  }
+  .wrapp_left_block_teacher > .name_teacher {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .wrapp_left_block_teacher > .text_about_teacher {
+    letter-spacing: unset;
+  }
+  .feedback {
+    height: 165px;
+  }
+  .about_teacher_second {
+    padding-top: 350px;
+  }
+  .main_test {
+    width: 548px;
+  }
+  .main_test > h1 {
+    font-size: 40px;
+    line-height: 1.25;
+  }
+  .main_test > p {
+    font-size: 24px;
+    line-height: 1.62;
+  }
+  .decoration_images_left_page2 {
+    position: absolute;
+    z-index: -1;
+    left: -80px;
+    top: 0;
+    width: 258px;
+    clip-path: polygon(80px 0, 100% 0, 100% 100%, 80px 100%);
+  }
+  .video_tai {
+    max-width: 590px;
+    right: -456px;
+    width: 100%;
+    top: -50px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1058,9 +1179,7 @@ form {
     padding: 10px 0;
   }
   .wrapp_header {
-    box-sizing: content-box;
-    padding: 0 64px 0 210px;
-    max-width: 1166px;
+    padding: 0 50px;
   }
   .hero_container,
   .video_container {
@@ -1097,12 +1216,7 @@ form {
     gap: unset;
     margin-bottom: 80px;
   }
-  .block_yin > li > img {
-    margin-bottom: 12px;
-  }
-  .block_yin > li:last-child > img {
-    margin-bottom: unset;
-  }
+
   .about_btn {
     width: 206px;
     height: 66px;
@@ -1143,7 +1257,7 @@ form {
   }
   .video_part {
     position: absolute;
-    right: 304px;
+    right: 104px;
   }
   .video_second {
     top: -520px;
@@ -1200,6 +1314,7 @@ form {
   }
   .feedback_title {
     margin-bottom: 45px;
+    padding-right: 150px;
   }
   .feedback {
     height: 140px;
@@ -1277,22 +1392,24 @@ form {
     padding: 0;
   }
   .wrapp_footer {
-    padding: 46px 83px 50px 53px;
+    padding: 46px 50px 50px 53px;
     flex-direction: row;
     position: relative;
     align-items: flex-start;
   }
   .footer_logo {
-    top: -34px;
-    left: 83px;
+    top: -14px;
+    left: 63px;
     position: absolute;
     z-index: 1;
+    width: 64px;
+    height: 64px;
   }
   .line {
     width: 1px;
-    height: 254px;
+    height: 130px;
   }
-  .polyci_block {
+  .polyci_wrap {
     order: 3;
   }
   .info_block {
@@ -1306,8 +1423,13 @@ form {
   }
 
   .polyci_block {
-    order: 3;
     padding-top: 28px;
+    margin-bottom: 6px;
+    width: 388px;
+  }
+  .payment_icon {
+    width: 346px;
+    height: 35px;
   }
 
   .line:nth-of-type(2) {
@@ -1316,5 +1438,54 @@ form {
 
   .social_media_block {
     order: 5;
+    width: 388px;
+  }
+  .video_tai {
+    max-width: 590px;
+    right: -456px;
+    width: 100%;
+    top: -450px;
+  }
+  .left-title_second {
+    text-align: center;
+    width: unset;
+  }
+  .left_price_second {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    width: unset;
+  }
+  .left_price {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(139, 0, 0);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .left_block_second {
+    align-items: center;
+    padding: 70px 280px 70px 151px;
+    position: relative;
+  }
+  .video_part_second {
+    top: 100px;
+    right: -284px;
+  }
+  .last_right_second {
+    width: 154px;
+    height: 332px;
+    right: -20px;
+    bottom: 320px;
+  }
+  .about_teacher_second {
+    padding-top: 50px;
+  }
+  .main_test > p {
+    width: 1041px;
+  }
+  .main_test {
+    width: 1041px;
   }
 }
