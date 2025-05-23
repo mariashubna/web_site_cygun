@@ -162,77 +162,98 @@
     </section>
 
     <section class="wrapp_block_form">
-      <div class="left_block_form">
-        <form
-          id="form"
-          action="https://script.google.com/macros/s/AKfycbwSKnNymIiO8WxLuFzzpSIQhfGKcM_x8J5txvINMFTmVBCipx81LTc_EiGKAnRF-pHB/exec"
-          method="POST"
-        >
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Імʼя"
-            required
+      <div class="container form_container">
+        <div class="right_block_form">
+          <h2>Ви всього за 1 крок до вивчення тайчі.</h2>
+          <p class="form_info">
+            Напишіть у формі зліва вашу електронну адресу на який вам буде
+            поширено доступ до папки із матеріалами курсу і перейдіть до оплати.
+            Доступ буде надано протягом 24 годин з моменту оплати.
+          </p>
+          <p class="form_access">
+            Доступ до матеріалів курсу не обмежений по часу.
+          </p>
+          <p class="form_price">Вартість курсу - <span>1550 грн</span></p>
+          <img
+            class="last_right_deko"
+            src="../img/last_right_deko.svg"
+            alt="decoration images"
           />
-          <div class="block_number">
-            <select name="phone_region" id="phone_region">
-              <option value="UA +380">UA +380</option>
-            </select>
+        </div>
+        <div class="left_block_form">
+          <form
+            class="form"
+            id="form"
+            action="https://script.google.com/macros/s/AKfycbwSKnNymIiO8WxLuFzzpSIQhfGKcM_x8J5txvINMFTmVBCipx81LTc_EiGKAnRF-pHB/exec"
+            method="POST"
+          >
+            <div>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Імʼя"
+                required
+              />
+            </div>
+            <div class="block_number">
+              <select name="phone_region" id="phone_region">
+                <option value="UA +380">UA +380</option>
+              </select>
+              <input
+                id="phone"
+                name="phone"
+                type="phone"
+                placeholder="Номер телефону"
+                required
+              />
+            </div>
             <input
-              id="phone"
-              name="phone"
-              type="phone"
-              placeholder="Номер телефону"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Введіть ел. пошту тут"
               required
             />
-          </div>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Введіть ел. пошту тут"
-            required
-          />
-          <button id="submit_form_btn">Оплатити</button>
-        </form>
-      </div>
-      <div class="right_block_form">
-        <h3>Ви всього за 1 крок до вивчення тайчі.</h3>
-        <p>
-          Напишіть у формі нижче вашу електронну адресу на який вам буде
-          поширено доступ до папки із матеріалами курсу і перейдіть до оплати.
-          Доступ буде надано протягом 24 годин з моменту оплати.
-        </p>
-        <p>
-          Вартість курсу - <span style="color: rgb(139, 0, 0)">1500 грн</span>
-        </p>
+            <button id="submit_form_btn">Оплатити</button>
+          </form>
+        </div>
       </div>
     </section>
 
     <footer class="wrapp_footer_block">
-      <img class="footer_logo" src="../img/logo.svg" alt="logo" />
-      <div class="wrapp_footer_items">
-        <div class="info_block">
-          <p>Простір розвитку "Енея" ™</p>
-          <p>ФОП Доброжанська О.В., ІПН 3285505903</p>
-          <p>
-            Юр. та фактичні адреси: Україна, м. Вінниця, вул. Пирогова, 21012
-          </p>
-          <p>Тел.: +380 (73) 872-06-82</p>
-          <p>Ел. пошта: eneya.qigong@gmail.com</p>
-        </div>
-        <div class="polyci_block">
-          <p id="polyci">Політика конфіденційності</p>
-          <p id="offerta">Публічна оферта</p>
-        </div>
-        <div class="social_media_block">
-          <div class="block_social_icon">
-            <a href="#"><img src="../img/instagramm.png" alt="instagramm" /></a>
-            <a href="#"><img src="../img/facebook.png" alt="facebook" /></a>
-            <a href="#"><img src="../img/youtube.png" alt="youtube" /></a>
+      <div class="container footer_container">
+        <div class="wrapp_footer">
+          <a href="/">
+            <img class="footer_logo" src="../img/logo.svg" alt="logo" />
+          </a>
+          <ul class="polyci_block">
+            <li id="polyci">
+              <a class="footer_link">Політика конфіденційності</a>
+            </li>
+            <li id="offerta"><a class="footer_link">Публічна оферта</a></li>
+          </ul>
+          <hr class="line" />
+          <div class="info_block">
+            <p>Простір розвитку "Енея" ™</p>
+            <p>ФОП Доброжанська О.В., ІПН 3285505903</p>
+            <p>
+              Юр. та фактичні адреси: Україна, м. Вінниця, вул. Пирогова, 21012
+            </p>
+            <p>Тел.: +380 (73) 872-06-82</p>
+            <p>Ел. пошта: eneya.qigong@gmail.com</p>
           </div>
-          <img class="payment_icon" src="../img/payment.png" alt="payment" />
+          <hr class="line" />
+          <div class="social_media_block">
+            <div class="block_social_icon">
+              <a href="#"
+                ><img src="../img/instagramm.png" alt="instagramm"
+              /></a>
+              <a href="#"><img src="../img/facebook.png" alt="facebook" /></a>
+              <a href="#"><img src="../img/youtube.png" alt="youtube" /></a>
+            </div>
+            <img class="payment_icon" src="../img/payment.png" alt="payment" />
+          </div>
         </div>
       </div>
 

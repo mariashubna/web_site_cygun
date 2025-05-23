@@ -589,7 +589,6 @@
   color: white;
   border-radius: 20px;
   height: 450px;
-  overflow-y: auto;
 }
 @media screen and (min-width: 430px) {
   .feedback_item {
@@ -648,6 +647,14 @@
   .feedback {
     font-size: 16px;
     line-height: 1.87;
+    overflow-y: auto;
+    height: 100%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .feedback::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
   .feedback_title {
     font-size: 36px;
@@ -730,148 +737,11 @@
   .wrapp_left_block_teacher > .text_about_teacher {
     letter-spacing: unset;
   }
+  feedback {
+    height: 150px;
+  }
 }
-@media screen and (min-width: 1440px) {
-  .header {
-    padding: 10px 0;
-  }
-  .wrapp_header {
-    box-sizing: content-box;
-    padding: 0 64px 0 210px;
-    max-width: 1166px;
-  }
-  .hero_container,
-  .video_container {
-    padding-left: 0;
-  }
-  .left_block {
-    max-width: unset;
-    width: 1090px;
-    height: 700px;
-    padding: 262px 406px 202px 98px;
-    border-radius: 0 20px 20px 0;
-  }
-  .video_placeholder {
-    max-width: unset;
-    height: 360px;
-    width: auto;
-    border-radius: 20px 0 0 20px;
-    top: -550px;
-    right: -480px;
-    left: unset;
-  }
-  .wrapp_decoration_block {
-    padding: 100px 0 50px;
-  }
-  .about_title {
-    width: unset;
-    margin-bottom: 20px;
-  }
-  .about_text {
-    width: 877px;
-  }
-  .block_yin {
-    width: 906px;
-    gap: unset;
-    margin-bottom: 80px;
-  }
-  .block_yin > li > img {
-    margin-bottom: 12px;
-  }
-  .block_yin > li:last-child > img {
-    margin-bottom: unset;
-  }
-  .about_btn {
-    width: 206px;
-    height: 66px;
-  }
-  .consumer_title {
-    font-size: 46px;
-    line-height: 1.22;
-    margin-bottom: 48px;
-  }
-  .item_consumer_text {
-    padding: 27px 263px 12px 130px;
-  }
-  .for_adapt_height {
-    padding: 70px 320px 70px 151px;
-    align-items: flex-start;
-    height: unset;
-  }
-  .left-title {
-    text-align: left;
-    font-size: 48px;
-    line-height: 1.42;
-  }
-  .left-text {
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: left;
-  }
-  .left-list {
-    margin-bottom: 10px;
-  }
-  .left-subtitle {
-    font-size: 24px;
-    line-height: 1.25;
-    text-align: left;
-  }
-  .btn_buy {
-    margin-bottom: 0;
-  }
-  .video_part {
-    position: absolute;
-    right: 304px;
-  }
-  .video_second {
-    top: -520px;
-  }
-  .decoration_images_left {
-    clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%);
-    left: -10px;
-    top: 0;
-  }
-  .decoration_images_right {
-    clip-path: unset;
-    width: 134px;
-    height: 383px;
-    bottom: 0;
-    right: 0;
-  }
-  .decoration_blue_image {
-    width: 184px;
-    height: 432px;
-    clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
-    left: -40px;
-    z-index: 1;
-    top: -270px;
-  }
-  .decoration_orange_image {
-    z-index: 2;
-    top: 10px;
-  }
-  .block_text {
-    font-size: 40px;
-    line-height: 1.25;
-  }
-  .second_list {
-    width: 1115px;
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-  .block_yin > li {
-    max-width: 250px;
-    min-width: 195px;
-  }
 
-  .block_yin > li:nth-child(3) > img {
-    margin-bottom: 0;
-  }
-  .feedback_container {
-    padding: 0;
-    max-width: 1440px;
-  }
-}
 /* block form */
 .wrapp_block_form {
   padding: 50px 0 0;
@@ -882,10 +752,9 @@
   padding: 25px 15px 50px;
   background: none;
   z-index: 1;
-  overflow: hidden; /* чтобы псевдоэлемент не выходил за края */
+  overflow: hidden;
 }
 
-/* полупрозрачный фон через псевдоэлемент */
 .left_block_form::before {
   content: "";
   position: absolute;
@@ -1182,5 +1051,270 @@ form {
     width: 438px;
     max-width: unset;
     height: 44px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 10px 0;
+  }
+  .wrapp_header {
+    box-sizing: content-box;
+    padding: 0 64px 0 210px;
+    max-width: 1166px;
+  }
+  .hero_container,
+  .video_container {
+    padding-left: 0;
+  }
+  .left_block {
+    max-width: unset;
+    width: 1090px;
+    height: 700px;
+    padding: 262px 406px 202px 98px;
+    border-radius: 0 20px 20px 0;
+  }
+  .video_placeholder {
+    max-width: unset;
+    height: 360px;
+    width: auto;
+    border-radius: 20px 0 0 20px;
+    top: -550px;
+    right: -480px;
+    left: unset;
+  }
+  .wrapp_decoration_block {
+    padding: 100px 0 50px;
+  }
+  .about_title {
+    width: unset;
+    margin-bottom: 20px;
+  }
+  .about_text {
+    width: 877px;
+  }
+  .block_yin {
+    width: 906px;
+    gap: unset;
+    margin-bottom: 80px;
+  }
+  .block_yin > li > img {
+    margin-bottom: 12px;
+  }
+  .block_yin > li:last-child > img {
+    margin-bottom: unset;
+  }
+  .about_btn {
+    width: 206px;
+    height: 66px;
+  }
+  .consumer_title {
+    font-size: 46px;
+    line-height: 1.22;
+    margin-bottom: 48px;
+  }
+  .item_consumer_text {
+    padding: 27px 263px 12px 130px;
+  }
+  .for_adapt_height {
+    padding: 70px 320px 70px 151px;
+    align-items: flex-start;
+    height: unset;
+  }
+  .left-title {
+    text-align: left;
+    font-size: 48px;
+    line-height: 1.42;
+  }
+  .left-text {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .left-list {
+    margin-bottom: 10px;
+  }
+  .left-subtitle {
+    font-size: 24px;
+    line-height: 1.25;
+    text-align: left;
+  }
+  .btn_buy {
+    margin-bottom: 0;
+  }
+  .video_part {
+    position: absolute;
+    right: 304px;
+  }
+  .video_second {
+    top: -520px;
+  }
+  .decoration_images_left {
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%);
+    left: -10px;
+    top: 0;
+  }
+  .decoration_images_right {
+    clip-path: unset;
+    width: 134px;
+    height: 383px;
+    bottom: 0;
+    right: 0;
+  }
+  .decoration_blue_image {
+    width: 184px;
+    height: 432px;
+    clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
+    left: -40px;
+    z-index: 1;
+    top: -270px;
+  }
+  .decoration_orange_image {
+    z-index: 2;
+    top: 10px;
+  }
+  .block_text {
+    font-size: 40px;
+    line-height: 1.25;
+  }
+  .second_list {
+    width: 1115px;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .block_yin > li {
+    max-width: 250px;
+    min-width: 195px;
+  }
+
+  .block_yin > li:nth-child(3) > img {
+    margin-bottom: 0;
+  }
+  .feedback_container {
+    padding: 58px 0 50px 150px;
+    max-width: 1440px;
+    border-radius: 0;
+  }
+  .feedback_container {
+    font-size: 46px;
+    line-height: 1.22;
+  }
+  .feedback_title {
+    margin-bottom: 45px;
+  }
+  .feedback {
+    height: 140px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .wrapp_left_block_teacher {
+    align-items: flex-start;
+  }
+  .teacher_container {
+    flex-direction: row-reverse;
+    gap: 88px;
+    align-items: flex-start;
+  }
+  .teacher_img {
+    margin-bottom: 0;
+  }
+  .wrapp_left_block_teacher > h2 {
+    font-size: 46px;
+    line-height: 1.22;
+  }
+  .wrapp_left_block_teacher > .name_teacher {
+    font-size: 24px;
+    line-height: 1.33;
+    text-align: left;
+  }
+  .wrapp_left_block_teacher > ul {
+    width: 408px;
+    align-items: flex-start;
+    padding-left: 32px;
+  }
+  .wrapp_left_block_teacher > .text_about_teacher {
+    text-align: left;
+  }
+  .about_teacher_wrapp {
+    padding: 50px 0;
+  }
+  .form_container {
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+  .left_block_form {
+    width: 720px;
+    padding: 150px 170px;
+    border-radius: 0 20px 0 0;
+  }
+  .left_block_form::before {
+    border-radius: 0 20px 0 0;
+  }
+  .right_block_form {
+    width: 720px;
+    max-width: unset;
+    padding: 115px 102px 110px 40px;
+    margin-bottom: 0;
+  }
+  #submit_form_btn {
+    width: 206px;
+    height: 66px;
+  }
+  .right_block_form > h2 {
+    text-align: left;
+    font-size: 48px;
+    line-height: 1.08;
+  }
+  .right_block_form > p {
+    text-align: left;
+  }
+  .last_right_deko {
+    width: 154px;
+    height: 432px;
+    right: 0;
+    bottom: 300px;
+  }
+  .footer_container {
+    padding: 0;
+  }
+  .wrapp_footer {
+    padding: 46px 83px 50px 53px;
+    flex-direction: row;
+    position: relative;
+    align-items: flex-start;
+  }
+  .footer_logo {
+    top: -34px;
+    left: 83px;
+    position: absolute;
+    z-index: 1;
+  }
+  .line {
+    width: 1px;
+    height: 254px;
+  }
+  .polyci_block {
+    order: 3;
+  }
+  .info_block {
+    order: 1;
+    align-items: flex-start;
+    padding-top: 28px;
+  }
+
+  .line:nth-of-type(1) {
+    order: 2;
+  }
+
+  .polyci_block {
+    order: 3;
+    padding-top: 28px;
+  }
+
+  .line:nth-of-type(2) {
+    order: 4;
+  }
+
+  .social_media_block {
+    order: 5;
   }
 }
