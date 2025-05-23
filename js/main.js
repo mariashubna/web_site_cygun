@@ -15,9 +15,9 @@ document.getElementById("form").addEventListener("submit", function (e) {
         if (result.result === "Success") {
           const currentPath = window.location.pathname;
           if (currentPath === "/" || currentPath === "/index.html") {
-            // window.location.href = "https://prt.mn/7DPYKrqd_";
+            window.location.href = "https://prt.mn/7DPYKrqd_";
           } else if (currentPath === "/pages/tai_chi.html") {
-            // window.location.href = "https://prt.mn/DC82FfqAwSt"; // Для page2
+            window.location.href = "https://prt.mn/DC82FfqAwSt"; // Для page2
           }
         } else {
           alert("Ошибка при отправке данных.");
