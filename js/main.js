@@ -16,8 +16,8 @@ document.getElementById("form").addEventListener("submit", function (e) {
           const currentPath = window.location.pathname;
           if (currentPath === "/" || currentPath === "/index.html") {
             window.location.href = "https://prt.mn/7DPYKrqd_";
-          } else if (currentPath === "/pages/tai_chi.html") {
-            window.location.href = "https://prt.mn/DC82FfqAwSt"; // Для page2
+          } else if (currentPath === "/tai_chi.html") {
+            window.location.href = "https://prt.mn/DC82FfqAwSt";
           }
         } else {
           alert("Ошибка при отправке данных.");
@@ -71,6 +71,10 @@ $("#close_modal_policy").on("click", function () {
   $("#offerta_visib").fadeOut("fast");
   $(".overlay").fadeOut("fast");
 });
+$("#close_modal_policy2").on("click", function () {
+  $("#offerta_visib").fadeOut("fast");
+  $(".overlay").fadeOut("fast");
+});
 
 $("#polyci").on("click", function () {
   $("#visib_policy_two").fadeIn("fast");
@@ -81,6 +85,10 @@ $("#overlay_two").on("click", function () {
   $("#overlay_two").fadeOut("fast");
 });
 $(".close_modal_policy").on("click", function () {
+  $("#visib_policy_two").fadeOut("fast");
+  $("#overlay_two").fadeOut("fast");
+});
+$(".close_modal_policy2").on("click", function () {
   $("#visib_policy_two").fadeOut("fast");
   $("#overlay_two").fadeOut("fast");
 });
