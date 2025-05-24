@@ -716,6 +716,12 @@ form {
   text-align: center;
   color: #000;
 }
+.info_block > a {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
 .polyci_block {
   text-align: center;
   font-family: var(--second_font);
