@@ -861,6 +861,7 @@ form {
 .wrapp_main_img > picture > img {
   display: block;
   width: 100%;
+  height: auto;
 }
 .wrapp_text {
   position: relative;
