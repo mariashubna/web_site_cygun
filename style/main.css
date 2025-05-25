@@ -1,3 +1,11 @@
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Header */
 .header {
   padding: 10px 0 8px;
@@ -16,7 +24,7 @@
   width: 84px;
   height: 84px;
 }
-.logo-text {
+.logo_text {
   font-family: var(--second_font);
   font-weight: 700;
   font-size: 18px;
@@ -75,9 +83,7 @@
   padding-top: 50px;
 }
 .left_block {
-  /* position: relative; */
   height: 336px;
-  max-width: 410px;
   width: 100%;
   background: var(--block_backround_color);
   border-radius: 20px;
@@ -132,14 +138,14 @@
   width: 100%;
   margin: 0 auto;
 }
-.left-list {
+.left_list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
   padding: 0 12px;
 }
-.left-title {
+.left_title {
   font-family: var(--main_font);
   font-weight: 700;
   font-size: 32px;
@@ -148,7 +154,7 @@
   text-align: center;
   margin-bottom: 20px;
 }
-.left-text {
+.left_text {
   font-family: var(--second_font);
   font-weight: 400;
   font-size: 16px;
@@ -156,7 +162,7 @@
   text-align: center;
   color: #4f596a;
 }
-.left-subtitle {
+.left_subtitle {
   font-family: var(--second_font);
   font-weight: 700;
   font-size: 20px;
@@ -167,12 +173,16 @@
 .buy_course_btn {
   display: block;
   text-decoration: none;
-  background: var(--btn_background_color);
+  background-image: var(--btn_background_color);
+  background-color: #0070aa;
   border: solid 2px transparent;
   border-radius: 33px;
   padding: 17px 24px;
   font-family: var(--second_font);
-  transition: color 0.2s ease-in-out;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 178px;
   height: 53px;
   font-weight: 700;
@@ -188,7 +198,8 @@
 .buy_course_btn:hover {
   color: black;
   border: solid 2px #002c43;
-  background: transparent;
+  background-image: none;
+  background-color: transparent;
 }
 .video_part {
   font-family: var(--main_font);
@@ -240,6 +251,7 @@
   line-height: 1.19;
   text-align: center;
   margin-bottom: 30px;
+  max-width: 598px;
 }
 .about_title {
   font-family: var(--main_font);
@@ -277,6 +289,7 @@
   gap: 10px;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
 }
 .second_list > li {
   gap: 17px;
@@ -293,6 +306,7 @@
 }
 .result_btn {
   margin-bottom: 0;
+  opacity: 0;
 }
 .decoration_images_left {
   position: absolute;
@@ -339,6 +353,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  opacity: 0;
 }
 .item_consumer_text > h3 {
   font-family: var(--main_font);
@@ -363,16 +378,11 @@
 .block_element_course > .block_btn {
   text-align: center;
 }
-/* .fragment_text {
-  font-family: var(--main_font);
-  font-size: 36px;
-  position: absolute;
-  top: -230px;
-  right: 70px;
-  white-space: nowrap;
-} */
 .wrapp_about_product_down {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .decoration_blue_image {
   position: absolute;
@@ -458,6 +468,7 @@
   margin-bottom: 10px;
 }
 .feedback {
+  font-family: var(--second_font);
   font-size: 20px;
   height: 270px;
   overflow-y: auto;
@@ -540,6 +551,10 @@
   background: none;
   z-index: 1;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .left_block_form::before {
@@ -551,12 +566,18 @@
   z-index: -1;
   border-radius: 20px 20px 0 0;
 }
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 .right_block_form {
   font-family: var(--main_font);
   max-width: 580px;
   width: 100%;
   margin-bottom: 25px;
-  position: relative;
 }
 .right_block_form > h2 {
   font-family: var(--main_font);
@@ -573,8 +594,7 @@
   z-index: -10;
   height: 208px;
   width: 73px;
-  bottom: -190px;
-  right: -10px;
+  right: 0;
 }
 .form_info {
   font-weight: 400;
@@ -619,7 +639,7 @@ form {
   border-radius: 15px;
   box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
-  color: #989898;
+  color: #001a49;
   font-family: var(--second-family);
   letter-spacing: 0.03em;
   padding-right: 19px;
@@ -648,6 +668,7 @@ form {
   padding-right: 20px;
   background: url("../img/arrowWhite.svg") no-repeat right 20px center white;
   background-size: 12px;
+  color: #001a49;
 }
 #phone {
   width: 100%;
@@ -657,13 +678,15 @@ form {
   border: none;
   padding-right: 19px;
   padding-left: 19px;
+  color: #001a49;
 }
 
 #submit_form_btn {
   text-decoration: none;
-  border: none;
   color: white;
-  background: var(--btn_background_color);
+  background-color: #0070aa;
+  background-image: var(--btn_background_color);
+  font-weight: 700;
   border: solid 2px transparent;
   border-radius: 33px;
   font-size: 20px;
@@ -672,18 +695,22 @@ form {
   cursor: pointer;
   display: block;
   margin: 0 auto;
-  transition: color 0.2s ease-in-out;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 #submit_form_btn:hover {
   color: black;
   border: solid 2px #002c43;
-  background: transparent;
+  background-image: none;
+  background-color: transparent;
 }
 
 /* footer block */
 
 .wrapp_footer {
-  padding: 50px 0 50px;
+  padding: 0 0 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -700,8 +727,9 @@ form {
   z-index: -1;
 }
 .footer_logo {
-  width: 84px;
-  height: 83px;
+  width: 64px;
+  height: 64px;
+  display: none;
 }
 .info_block {
   font-family: var(--second_font);
@@ -712,13 +740,13 @@ form {
 }
 .info_block > p {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 8px;
   text-align: center;
   color: #000;
 }
 .link {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 8px;
   text-align: center;
   color: #000;
 }
@@ -727,13 +755,15 @@ form {
   font-family: var(--second_font);
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+}
+.polyci_block > li {
+  height: 12px;
 }
 .footer_link {
   text-decoration: underline;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 8px;
   white-space: nowrap;
 }
 .line {
@@ -748,7 +778,6 @@ form {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 10px;
 }
 .social_media_block > .block_social_icon > a {
   width: 48px;
@@ -814,7 +843,7 @@ form {
 
 /* page 2 */
 .hero {
-  padding: 0 10px 50px 10px;
+  padding: 0 10px 0 10px;
 }
 .wrapp_main_img {
   background: var(--block_backround_color);
@@ -822,7 +851,8 @@ form {
   border-radius: 20px;
   padding: 25px 20px;
 }
-.wrapp_main_img > img {
+.wrapp_main_img > picture > img {
+  display: block;
   width: 100%;
 }
 .wrapp_text {
@@ -871,7 +901,7 @@ form {
   max-width: 356px;
   right: -456px;
   width: 100%;
-  top: -50px;
+  top: -100px;
   height: 200px;
 }
 
@@ -894,8 +924,10 @@ form {
   margin-bottom: 20px;
   text-align: center;
   width: unset;
+  font-family: var(--main_font);
 }
 .left_price {
+  font-family: var(--main_font);
   font-size: 24px;
   font-weight: 700;
   color: rgb(139, 0, 0);
@@ -907,7 +939,7 @@ form {
   order: 5;
 }
 .info_block {
-  order: 1;
+  order: 3;
 }
 
 .line:nth-of-type(1) {
@@ -919,14 +951,15 @@ form {
 }
 
 .social_media_block {
-  order: 3;
+  order: 1;
 }
 
 .info_block > .IPN {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 8px;
   text-align: center;
   color: #000;
+  text-decoration: none;
 }
 
 /* adapt */
@@ -934,10 +967,19 @@ form {
   .for_adapt_height {
     height: 870px;
   }
+  .video_tai {
+    top: -120px;
+  }
 }
 @media screen and (min-width: 386px) {
   .for_adapt_height {
     height: 751px;
+  }
+  .video_placeholder {
+    top: -60px;
+  }
+  .video_second {
+    top: -20px;
   }
 }
 
@@ -958,7 +1000,8 @@ form {
     max-width: 590px;
   }
   .video_tai {
-    max-width: 356px;
+    max-width: 500px;
+    height: 300px;
   }
   .second_list {
     gap: 30px 26px;
@@ -973,26 +1016,64 @@ form {
   }
   .main_container_second {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .feedback {
     height: 280px;
   }
+  .second_block {
+    padding: 320px 0 50px;
+  }
+}
+@media screen and (min-width: 520px) {
+  .wrapp_decoration_block {
+    padding: 350px 0 50px;
+  }
+  .second_block {
+    padding: 340px 0 50px;
+  }
+  .video_second {
+    top: -90px;
+  }
+  .video_tai {
+    top: -130px;
+  }
 }
 
+@media screen and (min-width: 700px) {
+  .wrapp_decoration_block {
+    padding: 344px 0 50px;
+  }
+  .second_block {
+    padding: 294px 0 50px;
+  }
+  .video_second {
+    top: -180px;
+  }
+  .video_tai {
+    top: -230px;
+  }
+  .about_teacher_second {
+    padding-top: 200px;
+  }
+}
 @media screen and (min-width: 834px) {
-  .logo-text {
+  .hero {
+    padding: 0 10px 50px 10px;
+  }
+  .logo_text {
     display: block;
   }
   .header {
     padding: 25px 0;
   }
   .payment_icon {
-    width: 438px;
+    width: 238px;
     max-width: unset;
-    height: 44px;
   }
   .left_block {
-    max-width: 814px;
     padding: 50px 22px;
   }
   .wrapp_main_subtitle {
@@ -1016,22 +1097,10 @@ form {
     font-size: 40px;
     line-height: 1.3;
   }
-  .form_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .left_block_form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
   .last_right_deko {
     width: 107px;
     height: 300px;
-    right: -128px;
-    bottom: -110px;
   }
   .form_info {
     width: 498px;
@@ -1045,13 +1114,14 @@ form {
   .about_btn {
     width: 228px;
     height: 67px;
+    opacity: 0;
   }
-  .left-title {
+  .left_title {
     font-size: 40px;
     line-height: 1.7;
     width: 530px;
   }
-  .left-list {
+  .left_list {
     padding: 0;
     margin-bottom: 40px;
   }
@@ -1060,6 +1130,9 @@ form {
     font-size: 32px;
   }
   .video_placeholder {
+    top: -20px;
+  }
+  .video_second {
     top: -50px;
   }
   .wrapp_about_product {
@@ -1071,15 +1144,13 @@ form {
   .decoration_images_left {
     width: 288px;
     height: 288px;
-    left: -20px;
+
     top: -240px;
   }
   .decoration_images_right {
     width: 84px;
     height: 278px;
-    clip-path: inset(0 10px 0 0);
     bottom: 236px;
-    right: -10px;
   }
   .about_title {
     font-size: 40px;
@@ -1110,6 +1181,7 @@ form {
   .block_text {
     font-size: 36px;
     line-height: 1.39;
+    max-width: unset;
   }
   .second_list {
     gap: 30px;
@@ -1150,7 +1222,7 @@ form {
   }
   .feedback_container {
     padding: 50px 30px;
-    max-width: 814px;
+    max-width: unset;
   }
   .feedback_item {
     width: 550px;
@@ -1191,7 +1263,8 @@ form {
     padding-top: 350px;
   }
   .main_test {
-    width: 548px;
+    min-width: 548px;
+    max-width: 70%;
   }
   .main_test > h1 {
     font-size: 40px;
@@ -1217,7 +1290,21 @@ form {
     height: 300px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 950px) {
+  .video_tai {
+    max-width: 700px;
+    height: 350px;
+    top: -100px;
+  }
+  .teacher_img {
+    width: 519px;
+    height: 470px;
+  }
+  .wrapp_left_block_teacher {
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 1280px) {
   .header {
     padding: 10px 0;
   }
@@ -1228,6 +1315,9 @@ form {
   .video_container {
     padding-left: 0;
   }
+  .right_block_second {
+    position: unset;
+  }
   .left_block {
     max-width: unset;
     width: 1090px;
@@ -1235,13 +1325,14 @@ form {
     padding: 262px 406px 202px 98px;
     border-radius: 0 20px 20px 0;
   }
+
   .video_placeholder {
     max-width: unset;
-    height: 360px;
+    height: 300px;
     width: auto;
     border-radius: 20px 0 0 20px;
-    top: -550px;
-    right: -480px;
+    top: -520px;
+    right: -386px;
     left: unset;
   }
   .wrapp_decoration_block {
@@ -1252,7 +1343,7 @@ form {
     margin-bottom: 20px;
   }
   .about_text {
-    width: 877px;
+    width: 780px;
   }
   .block_yin {
     width: 906px;
@@ -1276,21 +1367,22 @@ form {
     padding: 70px 320px 70px 151px;
     align-items: flex-start;
     height: unset;
+    position: relative;
   }
-  .left-title {
+  .left_title {
     text-align: left;
     font-size: 48px;
     line-height: 1.42;
   }
-  .left-text {
+  .left_text {
     font-size: 20px;
     line-height: 1.5;
     text-align: left;
   }
-  .left-list {
+  .left_list {
     margin-bottom: 10px;
   }
-  .left-subtitle {
+  .left_subtitle {
     font-size: 24px;
     line-height: 1.25;
     text-align: left;
@@ -1298,12 +1390,18 @@ form {
   .btn_buy {
     margin-bottom: 0;
   }
+  .wrapp_video_block {
+    position: relative;
+  }
   .video_part {
     position: absolute;
-    right: 104px;
+    right: -114px;
+    top: 130px;
   }
   .video_second {
-    top: -520px;
+    top: -450px;
+    right: -358px;
+    height: 270px;
   }
   .decoration_images_left {
     clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%);
@@ -1320,8 +1418,6 @@ form {
   .decoration_blue_image {
     width: 184px;
     height: 432px;
-    clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
-    left: -40px;
     z-index: 1;
     top: -270px;
   }
@@ -1348,7 +1444,6 @@ form {
   }
   .feedback_container {
     padding: 58px 0 50px 150px;
-    max-width: 1440px;
     border-radius: 0;
   }
   .feedback_container {
@@ -1374,6 +1469,8 @@ form {
   }
   .teacher_img {
     margin-bottom: 0;
+    width: 419px;
+    height: 382px;
   }
   .wrapp_left_block_teacher > h2 {
     font-size: 46px;
@@ -1410,7 +1507,7 @@ form {
   .right_block_form {
     width: 720px;
     max-width: unset;
-    padding: 115px 102px 110px 40px;
+    padding: 100px 102px 100px 40px;
     margin-bottom: 0;
   }
   #submit_form_btn {
@@ -1429,7 +1526,7 @@ form {
     width: 154px;
     height: 432px;
     right: 0;
-    bottom: 300px;
+    bottom: 400px;
   }
   .footer_container {
     padding: 0;
@@ -1445,8 +1542,7 @@ form {
     left: 63px;
     position: absolute;
     z-index: 1;
-    width: 64px;
-    height: 64px;
+    display: block;
   }
   .line {
     width: 1px;
@@ -1467,8 +1563,9 @@ form {
 
   .polyci_block {
     padding-top: 28px;
-    margin-bottom: 6px;
+    margin-bottom: 16px;
     width: 388px;
+    gap: 5px;
   }
   .payment_icon {
     width: 346px;
@@ -1484,12 +1581,14 @@ form {
     width: 388px;
   }
   .video_tai {
-    max-width: 590px;
-    right: -456px;
+    max-width: 490px;
+    right: 0;
     width: 100%;
-    top: -450px;
+    top: 35%;
+    height: 300px;
+    left: 81.7%;
   }
-  .left-title_second {
+  .left_title_second {
     text-align: center;
     width: unset;
   }
@@ -1509,17 +1608,16 @@ form {
   }
   .left_block_second {
     align-items: center;
-    padding: 70px 280px 70px 151px;
-    position: relative;
+    padding: 70px 330px 70px 121px;
+    position: unset;
   }
   .video_part_second {
-    top: 100px;
-    right: -284px;
+    top: 140px;
+    right: 60px;
   }
   .last_right_second {
-    width: 154px;
+    width: 120px;
     height: 332px;
-    right: -20px;
     bottom: 320px;
   }
   .about_teacher_second {
@@ -1529,6 +1627,122 @@ form {
     width: 1041px;
   }
   .main_test {
+    width: 900px;
+    max-width: unset;
+    min-width: unset;
+  }
+  .info_block > p {
+    text-align: left;
+  }
+  .info_block > p {
+    font-size: 12px;
+  }
+  .info_block > .IPN {
+    font-size: 12px;
+  }
+  .link {
+    font-size: 12px;
+  }
+  .footer_link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .video_placeholder {
+    height: 360px;
+    top: -550px;
+    right: -480px;
+  }
+  .video_second {
+    top: -520px;
+    height: 300px;
+    right: -426px;
+  }
+
+  .video_part_second {
+    top: 100px;
+    right: -284px;
+  }
+  .left_block_second {
+    padding: 70px 280px 70px 151px;
+    position: relative;
+  }
+  .main_test {
     width: 1041px;
   }
+  .about_text {
+    width: 877px;
+  }
+  .video_part {
+    right: -204px;
+    top: unset;
+  }
+  .feedback_container {
+    max-width: 1440px;
+  }
+  .video_tai {
+    max-width: 590px;
+    right: -456px;
+    width: 100%;
+    top: -450px;
+    left: unset;
+  }
+  .last_right_deko {
+    bottom: 300px;
+  }
+  .polyci_block > li {
+    height: unset;
+  }
+  .wrapp_video_block {
+    position: unset;
+  }
+  .right_block_second {
+    position: relative;
+  }
+}
+
+/* list animation */
+.anim-fade-in > li:nth-child(1) {
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.anim-fade-in > li:nth-child(2) {
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.anim-fade-in > li:nth-child(3) {
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+}
+
+.anim-fade-in > li:nth-child(4) {
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 2.4s;
+  animation-fill-mode: forwards;
+}
+
+.btn-anim {
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 2.8s;
+  animation-fill-mode: forwards;
 }

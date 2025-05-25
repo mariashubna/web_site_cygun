@@ -54,18 +54,17 @@ li {
 
 @media screen and (min-width: 430px) {
   .container {
-    max-width: 430px;
     padding-left: 10px;
     padding-right: 10px;
   }
 }
-@media screen and (min-width: 834px) {
+
+@media screen and (min-width: 1280px) {
   .container {
-    max-width: 834px;
-    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;

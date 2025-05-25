@@ -27,7 +27,7 @@
       <div class="wrapp_header container">
         <a class="block_logo" href="./index.html">
           <img src="./img/logo.svg" alt="Logo" />
-          <p class="logo-text">Енея ™</p>
+          <p class="logo_text">Енея ™</p>
         </a>
         <div class="select_course">
           <div id="btn_course" class="btn_cours">
@@ -44,7 +44,14 @@
     <main>
       <section class="hero">
         <div class="wrapp_main_img container">
-          <img src="./img/handleimg.png" alt="main img" />
+          <picture class="hero-small-photo hidden-photo">
+            <source media="(min-width: 1280px)" srcset="./img/handleimg.png" />
+            <img
+              class="hero-photo-small"
+              src="./img/handleimg_mobile.jpg"
+              alt="Hand"
+            />
+          </picture>
         </div>
       </section>
 
@@ -98,7 +105,7 @@
       <section class="wrapp_video_block">
         <div class="container video_container">
           <div class="left_block for_adapt_height left_block_second">
-            <h2 class="left-title left-title_second">
+            <h2 class="left_title left_title_second">
               Із чого складається запис відеокурсу?
             </h2>
             <p class="left_text_second">
@@ -112,7 +119,7 @@
             <a class="buy_course_btn btn_buy" href="#form">Придбати курс</a>
             <p class="video_part video_part_second">Фрагмент відеокурсу:</p>
           </div>
-          <div class="right_block">
+          <div class="right_block right_block_second">
             <iframe
               width="560"
               height="315"
@@ -225,7 +232,7 @@
             <form
               class="form"
               id="form"
-              action="https://script.google.com/macros/s/AKfycbwSKnNymIiO8WxLuFzzpSIQhfGKcM_x8J5txvINMFTmVBCipx81LTc_EiGKAnRF-pHB/exec"
+              action="https://script.google.com/macros/s/AKfycbzQNM5Dll4Mggg-RZ2MkGiYAfRKXvJNLsmE7gRT7kAgFxGznJ-0yFYF2Rsm00MnyAYM7Q/exec"
               method="POST"
             >
               <div>

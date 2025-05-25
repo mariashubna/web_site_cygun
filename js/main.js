@@ -38,19 +38,19 @@ document.getElementById("form").addEventListener("submit", function (e) {
 });
 
 $(".buy_course_btn").on("click", function (e) {
-  e.preventDefault(); // Отключаем стандартное поведение якоря
+  e.preventDefault();
 
-  const target = $($(this).attr("href")); // Находим целевой блок по якорю
+  const target = $($(this).attr("href"));
   if (target.length) {
-    const offset = $(window).height() / 2 - target.outerHeight() / 2; // Вычисляем смещение для центрирования
-    const scrollToPosition = target.offset().top - offset; // Позиция прокрутки
+    const offset = $(window).height() / 2 - target.outerHeight() / 2;
+    const scrollToPosition = target.offset().top - offset;
 
     $("html, body").animate(
       {
         scrollTop: scrollToPosition,
       },
       800
-    ); // Длительность скролла в миллисекундах
+    );
   }
 });
 
@@ -123,4 +123,58 @@ slider.addEventListener("mousemove", (e) => {
 // Заборона на копіювання тексту в відгуках
 slider.addEventListener("copy", (e) => {
   e.preventDefault();
+});
+
+// Анімований список
+let consumerList = document.querySelector(".consumer_list");
+let blockYin = document.querySelectorAll(".block_yin");
+let aboutBtn = document.querySelectorAll(".about_btn");
+let resultBtn = document.querySelectorAll(".result_btn");
+
+function isInViewport(element) {
+  if (!element) return false;
+  let rect = element.getBoundingClientRect();
+  let html = document.documentElement;
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || html.clientHeight) &&
+    rect.right <= (window.innerWidth || html.clientWidth)
+  );
+}
+
+if (consumerList) {
+  if (isInViewport(consumerList)) {
+    for (let i = 0; i < consumerList.children.length; i++) {
+      consumerList.children[i].style.opacity = "1";
+    }
+  } else {
+    window.addEventListener("scroll", () => {
+      if (isInViewport(consumerList)) {
+        consumerList.classList.add("anim-fade-in");
+      }
+    });
+  }
+}
+
+blockYin.forEach((blockYinItem) => {
+  let childrenCount = blockYinItem.children.length;
+
+  if (isInViewport(blockYinItem)) {
+    for (let i = 0; i < childrenCount; i++) {
+      blockYinItem.children[i].style.opacity = "1";
+    }
+    aboutBtn.forEach((btn) => (btn.style.opacity = "1"));
+    resultBtn.forEach((btn) => (btn.style.opacity = "1"));
+  }
+});
+
+window.addEventListener("scroll", () => {
+  blockYin.forEach((blockYinItem) => {
+    if (isInViewport(blockYinItem)) {
+      blockYinItem.classList.add("anim-fade-in");
+      aboutBtn.forEach((btn) => btn.classList.add("btn-anim"));
+      resultBtn.forEach((btn) => btn.classList.add("btn-anim"));
+    }
+  });
 });
