@@ -131,6 +131,37 @@ let blockYin = document.querySelectorAll(".block_yin");
 let aboutBtn = document.querySelectorAll(".about_btn");
 let resultBtn = document.querySelectorAll(".result_btn");
 
+function isСonsumerInViewport(element) {
+  if (!element) return false;
+  const rect = element.getBoundingClientRect();
+  const windowHeight =
+    window.innerHeight || document.documentElement.clientHeight;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  const visibleHeight =
+    Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+
+  if (windowWidth >= 1280) {
+    return visibleHeight >= 250;
+  } else {
+    return visibleHeight >= 50;
+  }
+}
+
+if (consumerList) {
+  if (isСonsumerInViewport(consumerList)) {
+    for (let i = 0; i < consumerList.children.length; i++) {
+      consumerList.children[i].style.opacity = "1";
+    }
+  } else {
+    window.addEventListener("scroll", () => {
+      if (isСonsumerInViewport(consumerList)) {
+        consumerList.classList.add("anim-fade-in");
+      }
+    });
+  }
+}
+
 function isInViewport(element) {
   if (!element) return false;
   let rect = element.getBoundingClientRect();
@@ -141,20 +172,6 @@ function isInViewport(element) {
     rect.bottom <= (window.innerHeight || html.clientHeight) &&
     rect.right <= (window.innerWidth || html.clientWidth)
   );
-}
-
-if (consumerList) {
-  if (isInViewport(consumerList)) {
-    for (let i = 0; i < consumerList.children.length; i++) {
-      consumerList.children[i].style.opacity = "1";
-    }
-  } else {
-    window.addEventListener("scroll", () => {
-      if (isInViewport(consumerList)) {
-        consumerList.classList.add("anim-fade-in");
-      }
-    });
-  }
 }
 
 blockYin.forEach((blockYinItem) => {

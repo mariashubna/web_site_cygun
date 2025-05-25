@@ -961,6 +961,9 @@ form {
   color: #000;
   text-decoration: none;
 }
+.about_btn {
+  opacity: 0;
+}
 
 /* adapt */
 @media screen and (min-width: 346px) {
@@ -1114,7 +1117,6 @@ form {
   .about_btn {
     width: 228px;
     height: 67px;
-    opacity: 0;
   }
   .left_title {
     font-size: 40px;
