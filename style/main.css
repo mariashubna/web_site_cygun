@@ -78,6 +78,9 @@
 }
 /* End header */
 /* main section */
+.hidden-title {
+  display: none;
+}
 
 .wrapp_video_block {
   padding-top: 50px;
@@ -494,7 +497,6 @@
 }
 .teacher_img {
   margin-bottom: 50px;
-  width: 100%;
 }
 .wrapp_left_block_teacher {
   max-width: 615px;
@@ -572,6 +574,9 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+.label {
+  display: none;
 }
 .right_block_form {
   font-family: var(--main_font);
@@ -765,6 +770,9 @@ form {
   cursor: pointer;
   font-size: 8px;
   white-space: nowrap;
+  border: none;
+  background: none;
+  padding: 0;
 }
 .line {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -788,7 +796,6 @@ form {
 .payment_icon {
   max-width: 330px;
   width: 100%;
-  padding-left: 30px;
 }
 .policy_wrapp {
   display: none;
@@ -983,6 +990,10 @@ form {
   }
   .video_second {
     top: -20px;
+  }
+  .teacher_img {
+    width: 320px;
+    height: auto;
   }
 }
 
