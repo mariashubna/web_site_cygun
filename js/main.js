@@ -131,7 +131,7 @@ let blockYin = document.querySelectorAll(".block_yin");
 let aboutBtn = document.querySelectorAll(".about_btn");
 let resultBtn = document.querySelectorAll(".result_btn");
 
-function isСonsumerInViewport(element) {
+function isInViewport(element) {
   if (!element) return false;
   const rect = element.getBoundingClientRect();
   const windowHeight =
@@ -142,36 +142,24 @@ function isСonsumerInViewport(element) {
     Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
 
   if (windowWidth >= 1280) {
-    return visibleHeight >= 250;
+    return visibleHeight >= 100;
   } else {
     return visibleHeight >= 50;
   }
 }
 
 if (consumerList) {
-  if (isСonsumerInViewport(consumerList)) {
+  if (isInViewport(consumerList)) {
     for (let i = 0; i < consumerList.children.length; i++) {
       consumerList.children[i].style.opacity = "1";
     }
   } else {
     window.addEventListener("scroll", () => {
-      if (isСonsumerInViewport(consumerList)) {
+      if (isInViewport(consumerList)) {
         consumerList.classList.add("anim-fade-in");
       }
     });
   }
-}
-
-function isInViewport(element) {
-  if (!element) return false;
-  let rect = element.getBoundingClientRect();
-  let html = document.documentElement;
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || html.clientHeight) &&
-    rect.right <= (window.innerWidth || html.clientWidth)
-  );
 }
 
 blockYin.forEach((blockYinItem) => {
