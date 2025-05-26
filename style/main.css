@@ -991,12 +991,17 @@ form {
   transform: translate(-50%, -50%);
   left: 50%;
 }
+.video_placeholder {
+  max-width: 310px;
+}
 
 .video_iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
   top: unset;
+  bottom: unset;
+  max-width: unset;
 }
 
 .play-button {
@@ -1010,9 +1015,7 @@ form {
   color: white;
   cursor: pointer;
 }
-.video_placeholder {
-  max-width: 310px;
-}
+
 .video_second {
   top: -20px;
 }
@@ -1092,6 +1095,10 @@ form {
   .about_teacher_second {
     padding-top: 300px;
   }
+  .video_iframe {
+    bottom: unset;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 520px) {
   .wrapp_decoration_block {
@@ -1109,6 +1116,9 @@ form {
   }
   .video_placeholder {
     bottom: -80%;
+  }
+  .video_iframe {
+    bottom: unset;
   }
 }
 
@@ -1363,6 +1373,9 @@ form {
   }
   .wrapp_left_block_teacher {
     max-width: 800px;
+  }
+  .img_prev {
+    height: 350px;
   }
 }
 @media screen and (min-width: 1280px) {
