@@ -135,6 +135,7 @@ let consumerList = document.querySelector(".consumer_list");
 let blockYin = document.querySelectorAll(".block_yin");
 let aboutBtn = document.querySelectorAll(".about_btn");
 let resultBtn = document.querySelectorAll(".result_btn");
+let feedbackList = document.querySelector(".wrapp_feedback_items");
 
 function isInViewport(element) {
   if (!element) return false;
@@ -162,6 +163,20 @@ if (consumerList) {
     window.addEventListener("scroll", () => {
       if (isInViewport(consumerList)) {
         consumerList.classList.add("anim-fade-in");
+      }
+    });
+  }
+}
+
+if (feedbackList) {
+  if (isInViewport(feedbackList)) {
+    for (let i = 0; i < feedbackList.children.length; i++) {
+      feedbackList.children[i].style.opacity = "1";
+    }
+  } else {
+    window.addEventListener("scroll", () => {
+      if (isInViewport(feedbackList)) {
+        feedbackList.classList.add("anim-fade-in");
       }
     });
   }
