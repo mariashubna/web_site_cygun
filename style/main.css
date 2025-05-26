@@ -463,10 +463,9 @@
   padding: 30px;
   color: white;
   border-radius: 20px;
-  height: 450px;
+  max-height: 520px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   opacity: 0;
 }
 
@@ -492,7 +491,7 @@
 .feedback {
   font-family: var(--second_font);
   font-size: 16px;
-  height: 320px;
+  max-height: 400px;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -1118,9 +1117,6 @@ form {
     flex-direction: column;
     align-items: center;
   }
-  .feedback {
-    height: 280px;
-  }
   .second_block {
     padding: 320px 0 50px;
   }
@@ -1362,7 +1358,7 @@ form {
   }
   .feedback_item {
     width: 550px;
-    height: 550px;
+    max-height: 550px;
     padding: 45px;
   }
   .profession {
@@ -1454,6 +1450,9 @@ form {
   }
   #submit_form_btn {
     font-size: 20px;
+  }
+  .block_yin > li {
+    max-width: 210px;
   }
 }
 
@@ -1646,7 +1645,7 @@ form {
     line-height: 1.5;
   }
   .feedback_item {
-    height: 480px;
+    max-height: 480px;
   }
   .item_consumer_text > p {
     font-size: 20px;
