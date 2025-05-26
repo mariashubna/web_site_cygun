@@ -183,3 +183,26 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// Відкладене завантаження відео для ортимізації
+
+document.querySelectorAll(".lazy-video").forEach((video) => {
+  video.addEventListener("click", () => {
+    const videoId = video.dataset.videoId;
+    const iframe = document.createElement("iframe");
+    // iframe.setAttribute("width", "560");
+    // iframe.setAttribute("height", "315");
+    iframe.setAttribute(
+      "src",
+      `https://www.youtube.com/embed/${videoId}?autoplay=1`
+    );
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.className = "video_placeholder video_iframe";
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    );
+    video.innerHTML = "";
+    video.appendChild(iframe);
+  });
+});

@@ -905,13 +905,6 @@ form {
 .margin_page {
   padding: 100px 0;
 }
-.video_tai {
-  max-width: 356px;
-  right: -456px;
-  width: 100%;
-  top: -100px;
-  height: 200px;
-}
 
 .left_text_second {
   font-family: var(--second_font);
@@ -923,7 +916,7 @@ form {
   text-align: center;
 }
 .about_teacher_second {
-  padding-top: 300px;
+  padding-top: 200px;
 }
 
 .left_price_second {
@@ -972,14 +965,49 @@ form {
 .about_btn {
   opacity: 0;
 }
+.video_container {
+  position: relative;
+}
+.img_prev {
+  width: 100%;
+  border-radius: 20px;
+  height: 200px;
+}
+.video_tai {
+  max-width: 100%;
+  /* right: -456px; */
+  bottom: -200px;
+  height: 200px;
+  position: absolute;
+
+  width: 94%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.video_iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: unset;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 /* adapt */
 @media screen and (min-width: 346px) {
   .for_adapt_height {
     height: 870px;
-  }
-  .video_tai {
-    top: -120px;
   }
 }
 @media screen and (min-width: 386px) {
@@ -989,12 +1017,18 @@ form {
   .video_placeholder {
     top: -60px;
   }
+  .video_iframe {
+    top: unset;
+  }
   .video_second {
     top: -20px;
   }
   .teacher_img {
     width: 320px;
     height: auto;
+  }
+  .video_tai {
+    width: 370px;
   }
 }
 
@@ -1015,8 +1049,10 @@ form {
     max-width: 590px;
   }
   .video_tai {
-    max-width: 500px;
+    width: 100%;
     height: 300px;
+    max-width: 400px;
+    bottom: -350px;
   }
   .second_list {
     gap: 30px 26px;
@@ -1041,6 +1077,12 @@ form {
   .second_block {
     padding: 320px 0 50px;
   }
+  .img_prev {
+    height: 300px;
+  }
+  .about_teacher_second {
+    padding-top: 300px;
+  }
 }
 @media screen and (min-width: 520px) {
   .wrapp_decoration_block {
@@ -1053,7 +1095,8 @@ form {
     top: -90px;
   }
   .video_tai {
-    top: -130px;
+    max-width: 500px;
+    bottom: -320px;
   }
 }
 
@@ -1068,10 +1111,7 @@ form {
     top: -180px;
   }
   .video_tai {
-    top: -230px;
-  }
-  .about_teacher_second {
-    padding-top: 200px;
+    bottom: -280px;
   }
 }
 @media screen and (min-width: 834px) {
@@ -1300,15 +1340,17 @@ form {
     max-width: 590px;
     right: -456px;
     width: 100%;
-    top: -50px;
     height: 300px;
+    bottom: -350px;
+  }
+  .video_iframe {
+    top: 0;
   }
 }
 @media screen and (min-width: 950px) {
   .video_tai {
-    max-width: 700px;
     height: 350px;
-    top: -100px;
+    bottom: -410px;
   }
   .teacher_img {
     width: 519px;
@@ -1329,9 +1371,6 @@ form {
   .video_container {
     padding-left: 0;
   }
-  .right_block_second {
-    position: unset;
-  }
   .left_block {
     max-width: unset;
     width: 1090px;
@@ -1349,6 +1388,7 @@ form {
     right: -386px;
     left: unset;
   }
+
   .wrapp_decoration_block {
     padding: 100px 0 50px;
   }
@@ -1598,7 +1638,7 @@ form {
     max-width: 490px;
     right: 0;
     width: 100%;
-    top: 35%;
+    top: 60%;
     height: 300px;
     left: 81.7%;
   }
@@ -1660,6 +1700,14 @@ form {
   .footer_link {
     font-size: 12px;
   }
+  .video_iframe {
+    height: 300px;
+    width: 490px;
+    position: relative;
+    top: unset;
+    left: 50%;
+    right: unset;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1697,10 +1745,9 @@ form {
   }
   .video_tai {
     max-width: 590px;
-    right: -456px;
     width: 100%;
-    top: -450px;
-    left: unset;
+    top: 350px;
+    left: 79%;
   }
   .last_right_deko {
     bottom: 300px;
@@ -1711,8 +1758,13 @@ form {
   .wrapp_video_block {
     position: unset;
   }
-  .right_block_second {
+  .video_iframe {
+    height: 300px;
+    width: 590px;
     position: relative;
+    top: unset;
+    left: 50%;
+    right: unset;
   }
 }
 
