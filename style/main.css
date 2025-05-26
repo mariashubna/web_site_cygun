@@ -649,7 +649,7 @@
   text-align: center;
 }
 .form_price > span {
-  color: red;
+  color: rgb(139, 0, 0);
 }
 form {
   width: 100%;
@@ -695,6 +695,7 @@ form {
   background: url("../img/arrowWhite.svg") no-repeat right 20px center white;
   background-size: 12px;
   color: #001a49;
+  cursor: pointer;
 }
 #phone {
   width: 100%;
@@ -783,9 +784,6 @@ form {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-}
-.polyci_block > li {
-  height: 12px;
 }
 .footer_link {
   text-decoration: underline;
