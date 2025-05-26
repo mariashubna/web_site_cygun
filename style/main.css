@@ -590,6 +590,9 @@
   max-width: 580px;
   width: 100%;
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .right_block_form > h2 {
   font-family: var(--main_font);
@@ -607,6 +610,7 @@
   height: 208px;
   width: 73px;
   right: 0;
+  bottom: 100px;
 }
 .form_info {
   font-weight: 400;
