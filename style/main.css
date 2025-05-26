@@ -1708,6 +1708,9 @@ form {
     left: 50%;
     right: unset;
   }
+  .img_prev {
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
