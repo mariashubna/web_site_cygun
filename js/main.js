@@ -57,7 +57,6 @@ $(".buy_course_btn").on("click", function (e) {
 //show course block
 $("#btn_course").on("click", function () {
   $(".drop_list").fadeToggle("fast");
-  console.log("click");
 });
 
 $(window).on("pageshow", function (event) {
