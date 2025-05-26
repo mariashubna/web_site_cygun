@@ -59,6 +59,11 @@ $("#btn_course").on("click", function () {
   $(".drop_list").fadeToggle("fast");
   console.log("click");
 });
+
+$(window).on("pageshow", function (event) {
+  $(".drop_list").hide();
+});
+
 $("#offerta").on("click", function () {
   $("#offerta_visib").fadeIn("fast");
   $(".overlay").fadeIn("fast");
