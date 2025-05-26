@@ -944,7 +944,7 @@ form {
   text-align: center;
 }
 .about_teacher_second {
-  padding-top: 200px;
+  padding-top: 120px;
 }
 
 .left_price_second {
@@ -1005,7 +1005,6 @@ form {
 }
 .video_tai {
   max-width: 100%;
-  /* right: -456px; */
   bottom: -140px;
   height: 200px;
   position: absolute;
@@ -1043,12 +1042,43 @@ form {
   top: -100px;
 }
 /* adapt */
+@media screen and (min-width: 340px) {
+  .video_tai {
+    bottom: -90px;
+  }
+  .video_second {
+    top: -180px;
+  }
+  .second_block {
+    padding-top: 100px;
+  }
+}
 @media screen and (min-width: 346px) {
   .for_adapt_height {
     height: 870px;
   }
   .video_tai {
-    bottom: -190px;
+    bottom: -170px;
+  }
+  .about_teacher_second {
+    padding-top: 150px;
+  }
+  .video_second {
+    top: -110px;
+  }
+  .second_block {
+    padding-top: 150px;
+  }
+}
+@media screen and (min-width: 370px) {
+  .video_tai {
+    bottom: -110px;
+  }
+  .about_teacher_second {
+    padding-top: 100px;
+  }
+  .video_second {
+    top: -160px;
   }
 }
 @media screen and (min-width: 386px) {
@@ -1065,6 +1095,7 @@ form {
   }
   .video_tai {
     width: 370px;
+    bottom: -180px;
   }
   .video_placeholder {
     bottom: -35%;
@@ -1074,6 +1105,12 @@ form {
   }
   .second_block {
     padding: 200px 0 50px;
+  }
+  .about_teacher_second {
+    padding-top: 160px;
+  }
+  .wrapp_decoration_block {
+    padding-top: 200px;
   }
 }
 
@@ -1098,7 +1135,7 @@ form {
     width: 100%;
     height: 300px;
     max-width: 400px;
-    bottom: -350px;
+    bottom: -300px;
   }
   .second_list {
     gap: 30px 26px;
@@ -1124,7 +1161,7 @@ form {
     height: 300px;
   }
   .about_teacher_second {
-    padding-top: 300px;
+    padding-top: 220px;
   }
   .video_iframe {
     bottom: unset;
@@ -1135,6 +1172,14 @@ form {
   }
   .second_block {
     padding: 220px 0 50px;
+  }
+  .wrapp_decoration_block {
+    padding-top: 220px;
+  }
+}
+@media screen and (min-width: 470px) {
+  .video_placeholder {
+    bottom: -50%;
   }
 }
 @media screen and (min-width: 520px) {
@@ -1158,7 +1203,26 @@ form {
     padding: 240px 0 50px;
   }
 }
-
+@media screen and (min-width: 600px) {
+  .second_block {
+    padding: 280px 0 50px;
+  }
+  .video_second {
+    top: -180px;
+  }
+  .left_title {
+    max-width: 600px;
+  }
+  .left_block_second {
+    height: 650px;
+  }
+  .video_tai {
+    bottom: -350px;
+  }
+  .about_teacher_second {
+    padding-top: 280px;
+  }
+}
 @media screen and (min-width: 700px) {
   .wrapp_decoration_block {
     padding: 344px 0 50px;
@@ -1170,10 +1234,13 @@ form {
     top: -210px;
   }
   .video_tai {
-    bottom: -170px;
+    bottom: -320px;
   }
   .about_teacher_second {
-    padding-top: 200px;
+    padding-top: 280px;
+  }
+  .left_list {
+    max-width: 635px;
   }
 }
 @media screen and (min-width: 834px) {
@@ -1208,7 +1275,8 @@ form {
     line-height: 1.5;
   }
   .for_adapt_height {
-    padding: 30px 127px 32px;
+    padding: 30px 127px 70px;
+    height: unset;
   }
 
   .right_block_form > h2 {
@@ -1265,7 +1333,7 @@ form {
     bottom: -85%;
   }
   .video_second {
-    top: -20px;
+    top: -40px;
   }
   .wrapp_about_product {
     gap: unset;
@@ -1454,12 +1522,15 @@ form {
   .block_yin > li {
     max-width: 210px;
   }
+  .left_block_second {
+    padding-bottom: 150px;
+  }
 }
 
 @media screen and (min-width: 950px) {
   .video_tai {
     height: 350px;
-    bottom: -410px;
+    bottom: -420px;
   }
   .teacher_img {
     width: 519px;
@@ -1470,6 +1541,9 @@ form {
   }
   .img_prev {
     height: 350px;
+  }
+  .about_teacher_second {
+    padding-top: 400px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1787,7 +1861,7 @@ form {
   .video_tai {
     max-width: unset;
     right: 0;
-    top: 44%;
+    top: 48%;
     transform: translateX(-50%);
     left: 50%;
     height: 350px;
@@ -1921,7 +1995,7 @@ form {
   }
   .video_tai {
     right: 0;
-    top: 44%;
+    top: 48%;
     transform: translateX(-50%);
     left: 50%;
     height: 350px;
