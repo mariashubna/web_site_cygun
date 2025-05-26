@@ -1221,8 +1221,8 @@ form {
   }
   .form_info {
     width: 498px;
-    font-size: 24px;
-    line-height: 1.62;
+    font-size: 20px;
+    line-height: 1.5;
   }
   .form_price {
     font-size: 20px;
@@ -1447,6 +1447,9 @@ form {
     font-size: 20px;
     line-height: 1.5;
   }
+  #submit_form_btn {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -1570,8 +1573,8 @@ form {
     height: 270px;
   }
   .form_info {
-    font-size: 24px;
-    line-height: 1.62;
+    font-size: 20px;
+    line-height: 1.5;
     width: unset;
   }
   .decoration_images_left {
@@ -1708,6 +1711,7 @@ form {
   #submit_form_btn {
     width: 206px;
     height: 66px;
+    font-size: 20px;
   }
   .right_block_form > h2 {
     text-align: center;
@@ -1807,7 +1811,7 @@ form {
     font-weight: 700;
     color: rgb(139, 0, 0);
     text-align: center;
-    margin-bottom: 390px;
+    margin-bottom: 410px;
   }
   .left_block_second {
     align-items: center;
