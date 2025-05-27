@@ -246,9 +246,12 @@ document.querySelectorAll(".lazy-video").forEach((video) => {
 
 const btnCourse = document.getElementById("btn_course");
 
-btnCourse.addEventListener("keydown", (event) => {
+function handleKeydown(event) {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
     btnCourse.click();
+    btnCourse.removeEventListener("keydown", handleKeydown);
   }
-});
+}
+
+btnCourse.addEventListener("keydown", handleKeydown);
