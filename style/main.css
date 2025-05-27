@@ -68,7 +68,7 @@
 .drop_list {
   z-index: 9;
   background: var(--btn_background_color);
-  width: 210px;
+  width: 170px;
   border-radius: 10px;
   padding: 15px;
   position: absolute;
@@ -198,7 +198,7 @@
   height: 53px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.2;
   text-align: center;
   color: #fff;
   margin: 0 auto;
@@ -722,8 +722,8 @@ form {
   border: solid 2px transparent;
   border-radius: 33px;
   font-size: 16px;
-  line-height: 1.5;
-  padding: 18px 52px;
+  line-height: 1;
+  padding: 19px 52px;
   font-family: var(--second_font);
   cursor: pointer;
   display: block;
@@ -1176,6 +1176,9 @@ form {
   .wrapp_decoration_block {
     padding-top: 220px;
   }
+  .drop_list {
+    width: 210px;
+  }
 }
 @media screen and (min-width: 470px) {
   .video_placeholder {
@@ -1309,7 +1312,7 @@ form {
     width: 206px;
     height: 66px;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .about_btn {
     width: 228px;
