@@ -131,7 +131,8 @@ slider.addEventListener("copy", (e) => {
 
 // Анімований список
 let consumerList = document.querySelector(".consumer_list");
-let blockYin = document.querySelectorAll(".block_yin");
+let blockYinTop = document.querySelectorAll(".block_yin_top");
+let blockYin = document.querySelectorAll(".second_list");
 let aboutBtn = document.querySelectorAll(".about_btn");
 let resultBtn = document.querySelectorAll(".result_btn");
 let feedbackList = document.querySelector(".wrapp_feedback_items");
@@ -188,7 +189,6 @@ blockYin.forEach((blockYinItem) => {
     for (let i = 0; i < childrenCount; i++) {
       blockYinItem.children[i].style.opacity = "1";
     }
-    aboutBtn.forEach((btn) => (btn.style.opacity = "1"));
     resultBtn.forEach((btn) => (btn.style.opacity = "1"));
   }
 });
@@ -197,12 +197,30 @@ window.addEventListener("scroll", () => {
   blockYin.forEach((blockYinItem) => {
     if (isInViewport(blockYinItem)) {
       blockYinItem.classList.add("anim-fade-in");
-      aboutBtn.forEach((btn) => btn.classList.add("btn-anim"));
       resultBtn.forEach((btn) => btn.classList.add("btn-anim"));
     }
   });
 });
 
+blockYinTop.forEach((blockYinTopItem) => {
+  let childrenCount = blockYinTopItem.children.length;
+
+  if (isInViewport(blockYinTopItem)) {
+    for (let i = 0; i < childrenCount; i++) {
+      blockYinTopItem.children[i].style.opacity = "1";
+    }
+    aboutBtn.forEach((btn) => (btn.style.opacity = "1"));
+  }
+});
+
+window.addEventListener("scroll", () => {
+  blockYinTop.forEach((blockYinTopItem) => {
+    if (isInViewport(blockYinTopItem)) {
+      blockYinTopItem.classList.add("anim-fade-in");
+      aboutBtn.forEach((btn) => btn.classList.add("btn-anim"));
+    }
+  });
+});
 // Відкладене завантаження відео для ортимізації
 
 document.querySelectorAll(".lazy-video").forEach((video) => {

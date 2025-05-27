@@ -21,8 +21,8 @@
   text-decoration: none;
 }
 .block_logo > img {
-  width: 84px;
-  height: 84px;
+  width: 64px;
+  height: 64px;
 }
 .logo_text {
   font-family: var(--second_font);
@@ -92,21 +92,19 @@
   position: relative;
 }
 .wrapp_video_block {
-  padding-top: 50px;
+  padding-top: 15px;
 }
 .left_block {
-  height: 365px;
   width: 100%;
   background: var(--block_backround_color);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px 22px 78px;
+  padding: 30px 20px;
 }
 
 .for_adapt_height {
-  height: 950px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -203,9 +201,6 @@
   color: #fff;
   margin: 0 auto;
 }
-.btn_buy {
-  margin-bottom: 30px;
-}
 
 .buy_course_btn:hover,
 .buy_course_btn:focus {
@@ -214,40 +209,24 @@
   background-image: none;
   background-color: transparent;
 }
-.video_part {
-  font-family: var(--main_font);
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.62;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  text-align: center;
-}
 
-.right_block {
-  position: relative;
-}
 .video_placeholder {
   max-width: 356px;
   width: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   border-radius: 20px;
-  box-shadow: 0px 32px 44px 0px #818a8c;
-  bottom: -40%;
-  z-index: 1;
+  box-shadow: 0px 12px 24px 0px #818a8c;
   border: none;
+  margin-bottom: 30px;
 }
 
 /* end main section */
 /* about product block */
 .wrapp_decoration_block {
   position: relative;
-  padding: 264px 0 50px;
+  padding: 30px 0 15px;
 }
 .second_block {
-  padding: 150px 0 50px;
+  padding: 30px 0 15px;
 }
 .wrapp_about_product {
   text-align: center;
@@ -345,7 +324,7 @@
 /* end about product block */
 /* about consumer */
 .wrapp_about_consumer {
-  padding: 50px 0;
+  padding: 15px 0;
 }
 .consumer_title {
   font-family: var(--main_font);
@@ -421,7 +400,7 @@
 }
 /* feedback section */
 .wrapp_feedback_block {
-  padding: 50px 0;
+  padding: 15px 0;
 }
 .feedback_container {
   background: var(--block_backround_color);
@@ -507,7 +486,7 @@
   display: flex;
   justify-content: center;
   gap: 80px;
-  padding: 50px 0;
+  padding: 15px 0;
 }
 .teacher_container {
   display: flex;
@@ -515,7 +494,7 @@
   align-items: center;
 }
 .teacher_img {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .wrapp_left_block_teacher {
   max-width: 615px;
@@ -565,12 +544,12 @@
 
 /* block form */
 .wrapp_block_form {
-  padding: 50px 0 0;
+  padding: 15px 0 0;
 }
 .left_block_form {
   position: relative;
   border-radius: 20px 20px 0 0;
-  padding: 25px 15px 50px;
+  padding: 30px 15px 50px;
   background: none;
   z-index: 1;
   overflow: hidden;
@@ -603,7 +582,7 @@
   font-family: var(--main_font);
   max-width: 580px;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -633,7 +612,7 @@
   letter-spacing: -0.06em;
   text-align: center;
   color: #000;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   font-family: var(--second_font);
 }
 .form_access {
@@ -892,6 +871,7 @@ form {
 }
 .wrapp_text {
   position: relative;
+  padding: 30px 0 15px;
 }
 .decoration_images_left_page2 {
   position: absolute;
@@ -902,14 +882,12 @@ form {
   clip-path: polygon(50px 0, 100% 0, 100% 100%, 50px 100%);
 }
 .main_container {
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .main_test {
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   font-family: var(--main_font);
   width: 100%;
 }
@@ -926,7 +904,9 @@ form {
   text-align: center;
   font-family: var(--second_font);
 }
-
+.about_teacher_second {
+  padding: 30px 0 15px;
+}
 .margin_feedback {
   padding: 100px 0;
 }
@@ -940,11 +920,8 @@ form {
   font-size: 18px;
   line-height: 1.5;
   color: #25282d;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
-}
-.about_teacher_second {
-  padding-top: 120px;
 }
 
 .left_price_second {
@@ -963,7 +940,7 @@ form {
   font-weight: 700;
   color: rgb(139, 0, 0);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .polyci_wrap {
@@ -1005,13 +982,10 @@ form {
 }
 .video_tai {
   max-width: 100%;
-  bottom: -140px;
   height: 200px;
-  position: absolute;
-
   width: 94%;
-  transform: translate(-50%, -50%);
-  left: 50%;
+  position: relative;
+  margin-bottom: 30px;
 }
 .video_placeholder {
   max-width: 310px;
@@ -1021,8 +995,6 @@ form {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  top: unset;
-  bottom: unset;
   max-width: unset;
 }
 
@@ -1038,79 +1010,15 @@ form {
   cursor: pointer;
 }
 
-.video_second {
-  top: -100px;
-}
 /* adapt */
-@media screen and (min-width: 340px) {
-  .video_tai {
-    bottom: -90px;
-  }
-  .video_second {
-    top: -180px;
-  }
-  .second_block {
-    padding-top: 100px;
-  }
-}
-@media screen and (min-width: 346px) {
-  .for_adapt_height {
-    height: 870px;
-  }
-  .video_tai {
-    bottom: -170px;
-  }
-  .about_teacher_second {
-    padding-top: 150px;
-  }
-  .video_second {
-    top: -110px;
-  }
-  .second_block {
-    padding-top: 150px;
-  }
-}
-@media screen and (min-width: 370px) {
-  .video_tai {
-    bottom: -110px;
-  }
-  .about_teacher_second {
-    padding-top: 100px;
-  }
-  .video_second {
-    top: -160px;
-  }
-}
-@media screen and (min-width: 386px) {
-  .for_adapt_height {
-    height: 751px;
-  }
-  .video_iframe {
-    top: unset;
-  }
 
+@media screen and (min-width: 386px) {
   .teacher_img {
     width: 320px;
     height: auto;
   }
   .video_tai {
     width: 370px;
-    bottom: -180px;
-  }
-  .video_placeholder {
-    bottom: -35%;
-  }
-  .video_second {
-    top: -80px;
-  }
-  .second_block {
-    padding: 200px 0 50px;
-  }
-  .about_teacher_second {
-    padding-top: 160px;
-  }
-  .wrapp_decoration_block {
-    padding-top: 200px;
   }
 }
 
@@ -1122,20 +1030,14 @@ form {
   form {
     width: 380px;
   }
-  .video_part {
-    line-height: 2.12;
-  }
 
   .video_placeholder {
     max-width: 590px;
-    width: 90%;
-    bottom: -47%;
   }
   .video_tai {
     width: 100%;
     height: 300px;
     max-width: 400px;
-    bottom: -300px;
   }
   .second_list {
     gap: 30px 26px;
@@ -1154,101 +1056,37 @@ form {
     flex-direction: column;
     align-items: center;
   }
-  .second_block {
-    padding: 320px 0 50px;
-  }
   .img_prev {
     height: 300px;
   }
-  .about_teacher_second {
-    padding-top: 220px;
-  }
   .video_iframe {
-    bottom: unset;
     width: 100%;
-  }
-  .video_second {
-    top: -120px;
-  }
-  .second_block {
-    padding: 220px 0 50px;
-  }
-  .wrapp_decoration_block {
-    padding-top: 220px;
   }
   .drop_list {
     width: 210px;
   }
 }
-@media screen and (min-width: 470px) {
-  .video_placeholder {
-    bottom: -50%;
-  }
-}
 @media screen and (min-width: 520px) {
-  .wrapp_decoration_block {
-    padding: 350px 0 50px;
-  }
-  .video_second {
-    top: -150px;
-  }
   .video_tai {
     max-width: 500px;
-    bottom: -270px;
-  }
-  .video_placeholder {
-    bottom: -65%;
-  }
-  .video_iframe {
-    bottom: unset;
-  }
-  .second_block {
-    padding: 240px 0 50px;
   }
 }
 @media screen and (min-width: 600px) {
-  .second_block {
-    padding: 280px 0 50px;
-  }
-  .video_second {
-    top: -180px;
-  }
   .left_title {
     max-width: 600px;
   }
-  .left_block_second {
-    height: 650px;
-  }
-  .video_tai {
-    bottom: -350px;
-  }
-  .about_teacher_second {
-    padding-top: 280px;
-  }
 }
 @media screen and (min-width: 700px) {
-  .wrapp_decoration_block {
-    padding: 344px 0 50px;
-  }
-  .second_block {
-    padding: 200px 0 50px;
-  }
-  .video_second {
-    top: -210px;
-  }
-  .video_tai {
-    bottom: -320px;
-  }
-  .about_teacher_second {
-    padding-top: 280px;
-  }
   .left_list {
     max-width: 635px;
   }
 }
 @media screen and (min-width: 834px) {
   .hero {
-    padding: 0 10px 50px 10px;
+    padding: 0 10px 20px 10px;
+  }
+  .wrapp_text {
+    padding: 20px 0;
   }
   .logo_text {
     display: block;
@@ -1261,7 +1099,13 @@ form {
     max-width: unset;
   }
   .left_block {
-    padding: 50px 22px;
+    padding: 30px 22px;
+  }
+  .wrapp_about_consumer {
+    padding: 20px 0;
+  }
+  .wrapp_video_block {
+    padding-top: 20px;
   }
   .wrapp_main_subtitle {
     font-size: 24px;
@@ -1277,24 +1121,29 @@ form {
     font-size: 20px;
     line-height: 1.5;
   }
-  .for_adapt_height {
-    padding: 30px 127px 70px;
-    height: unset;
-  }
 
   .right_block_form > h2 {
     font-size: 40px;
     line-height: 1.62;
   }
-
+  .second_block {
+    padding: 100px 0;
+  }
   .last_right_deko {
     width: 107px;
     height: 300px;
+  }
+  .wrapp_feedback_block {
+    padding: 20px 0;
+  }
+  .wrapp_block_form {
+    padding: 20px 0 0;
   }
   .form_info {
     width: 498px;
     font-size: 20px;
     line-height: 1.5;
+    margin-bottom: 36px;
   }
   .form_price {
     font-size: 20px;
@@ -1303,8 +1152,13 @@ form {
   .left_text_second {
     font-size: 20px;
     line-height: 1.5;
+    max-width: 818px;
   }
   .left_price_second {
+    font-size: 24px;
+    line-height: 1.62;
+  }
+  .left_price {
     font-size: 24px;
     line-height: 1.62;
   }
@@ -1325,24 +1179,15 @@ form {
   }
   .left_list {
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    max-width: 718px;
   }
 
-  .video_part {
-    font-size: 32px;
-    line-height: 1.22;
-  }
-  .video_placeholder {
-    bottom: -85%;
-  }
-  .video_second {
-    top: -40px;
-  }
   .wrapp_about_product {
     gap: unset;
   }
   .wrapp_decoration_block {
-    padding: 428px 0 50px;
+    padding: 40px 0 20px;
   }
   .decoration_images_left {
     width: 288px;
@@ -1364,11 +1209,10 @@ form {
   .about_text {
     font-size: 24px;
     line-height: 1.62;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 718px;
   }
   .block_yin {
-    margin-bottom: 25px;
     gap: 80px;
   }
   .block_yin > li > img {
@@ -1401,12 +1245,9 @@ form {
     line-height: 1.62;
   }
   .item_consumer_text > p {
-    width: 501px;
+    max-width: 718px;
     font-size: 20px;
     line-height: 1.5;
-  }
-  .item_consumer_text > p.consumer_text_last {
-    width: 100%;
   }
   .decoration_blue_image {
     left: -80px;
@@ -1424,7 +1265,7 @@ form {
     padding: 0 170px;
   }
   .feedback_container {
-    padding: 50px 30px;
+    padding: 30px 20px;
     max-width: unset;
   }
   .feedback_item {
@@ -1451,11 +1292,12 @@ form {
     margin-bottom: 30px;
   }
   .about_teacher_wrapp {
-    padding: 50px 0 68px;
+    padding: 20px 0;
   }
   .teacher_img {
     width: 419px;
     height: 382px;
+    margin-bottom: 30px;
   }
   .wrapp_left_block_teacher > .name_teacher {
     font-size: 24px;
@@ -1470,12 +1312,12 @@ form {
     font-size: 20px;
     line-height: 1.5;
   }
-  .about_teacher_second {
-    padding-top: 350px;
+  .block_logo > img {
+    width: 84px;
+    height: 84px;
   }
   .main_test {
-    min-width: 548px;
-    max-width: 70%;
+    max-width: 818px;
   }
   .main_test > h1 {
     font-size: 40px;
@@ -1495,13 +1337,8 @@ form {
   }
   .video_tai {
     max-width: 590px;
-    right: -456px;
     width: 100%;
     height: 300px;
-    bottom: -350px;
-  }
-  .video_iframe {
-    top: 0;
   }
   .wrapp_left_block_teacher > h2 {
     font-size: 40px;
@@ -1525,67 +1362,59 @@ form {
   .block_yin > li {
     max-width: 210px;
   }
-  .left_block_second {
-    padding-bottom: 150px;
+  .about_teacher_second {
+    padding: 40px 0 20px;
+  }
+  .wrapp_left_block_teacher {
+    max-width: 818px;
   }
 }
 
 @media screen and (min-width: 950px) {
   .video_tai {
     height: 350px;
-    bottom: -420px;
   }
   .teacher_img {
     width: 519px;
     height: 470px;
   }
-  .wrapp_left_block_teacher {
-    max-width: 800px;
-  }
+
   .img_prev {
     height: 350px;
-  }
-  .about_teacher_second {
-    padding-top: 400px;
   }
 }
 @media screen and (min-width: 1280px) {
   .header {
     padding: 10px 0;
   }
+  .hero {
+    padding: 0px 10px 40px;
+  }
   .hero_container {
-    padding: 20px;
+    padding: 0 20px;
   }
   .wrapp_header {
     padding: 0 50px;
   }
-
+  .wrapp_text {
+    padding: 40px 0;
+  }
   .video_container {
     padding: 0 20px;
   }
   .left_block {
     max-width: unset;
-    /* width: 1090px;
-    height: 700px; */
-    /* padding: 262px 406px 202px 98px; */
-    /* border-radius: 0 20px 20px 0; */
-    padding: 50px 0;
+    padding: 40px 0;
     height: unset;
   }
   .video_placeholder {
     max-width: unset;
     height: 300px;
     width: auto;
-    bottom: 180px;
-  }
-  .wrapp_main_text {
-    margin-bottom: 370px;
+    margin-bottom: 40px;
   }
   .block_align {
     max-width: unset;
-  }
-  .wrapp_decoration_block {
-    padding: 50px 0;
   }
   .about_title {
     width: unset;
@@ -1595,16 +1424,23 @@ form {
   }
   .about_text {
     width: 1040px;
+    margin-bottom: 40px;
   }
   .block_yin {
     width: 906px;
     gap: unset;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   .about_btn {
     width: 206px;
     height: 66px;
+  }
+  .wrapp_decoration_block {
+    padding: 80px 0 40px;
+  }
+  .wrapp_about_consumer {
+    padding: 40px 0;
   }
   .consumer_title {
     font-size: 46px;
@@ -1612,9 +1448,8 @@ form {
     margin-bottom: 40px;
   }
   .for_adapt_height {
-    padding: 70px 100px;
+    padding: 40px 100px;
     align-items: center;
-    height: unset;
     position: relative;
   }
   .left_title {
@@ -1637,21 +1472,15 @@ form {
     font-size: 24px;
     line-height: 1.62;
     text-align: left;
-    margin-bottom: 350px;
-  }
-  .btn_buy {
-    margin-bottom: 0;
+    margin-bottom: 40px;
   }
   .wrapp_video_block {
     position: relative;
-  }
-  .video_part {
-    display: none;
+    padding-top: 40px;
   }
   .video_second {
-    top: -450px;
-    right: -358px;
     height: 270px;
+    margin-bottom: 40px;
   }
   .form_info {
     font-size: 20px;
@@ -1693,7 +1522,7 @@ form {
   .second_list {
     width: 1115px;
     gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .block_yin > li {
     max-width: 250px;
@@ -1710,6 +1539,8 @@ form {
   .feedback_container {
     font-size: 46px;
     line-height: 1.62;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .feedback_title {
     margin-bottom: 40px;
@@ -1737,7 +1568,13 @@ form {
     max-width: 1040px;
   }
   .teacher_container {
-    gap: 88px;
+    gap: 40px;
+  }
+  .wrapp_feedback_block {
+    padding: 40px 0 0;
+  }
+  .wrapp_block_form {
+    padding: 40px 0 0;
   }
   .teacher_img {
     width: 419px;
@@ -1769,7 +1606,7 @@ form {
     line-height: 1.5;
   }
   .about_teacher_wrapp {
-    padding: 50px 0;
+    padding: 80px 0 40px;
   }
   .form_container {
     flex-direction: row;
@@ -1863,10 +1700,7 @@ form {
   }
   .video_tai {
     max-width: unset;
-    right: 0;
-    top: 48%;
-    transform: translateX(-50%);
-    left: 50%;
+    margin-bottom: 40px;
     height: 350px;
     width: 650px;
   }
@@ -1892,34 +1726,28 @@ form {
     font-weight: 700;
     color: rgb(139, 0, 0);
     text-align: center;
-    margin-bottom: 410px;
+    margin-bottom: 40px;
   }
   .left_block_second {
     align-items: center;
     position: unset;
-  }
-  .video_part_second {
-    top: 140px;
-    right: 60px;
   }
   .last_right_second {
     width: 120px;
     height: 332px;
     bottom: 320px;
   }
-  .about_teacher_second {
-    padding-top: 50px;
-  }
+
   .main_test > p {
     width: 1040px;
   }
   .main_test {
-    width: 900px;
     max-width: unset;
     min-width: unset;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
   }
   .info_block > p {
     text-align: left;
@@ -1940,8 +1768,6 @@ form {
     height: 350px;
     width: 650px;
     position: relative;
-    left: 50%;
-    right: unset;
   }
   .img_prev {
     border-radius: 20px;
@@ -1963,6 +1789,10 @@ form {
   }
   .left_text_second {
     max-width: 1040px;
+    margin-bottom: 40px;
+  }
+  .wrapp_main_text {
+    margin-bottom: 40px;
   }
 }
 
@@ -1971,13 +1801,7 @@ form {
     height: 360px;
   }
   .video_second {
-    top: -500px;
     height: 300px;
-    right: -426px;
-  }
-  .video_part_second {
-    top: 100px;
-    right: -284px;
   }
   .left_block_second {
     padding: 70px 280px 70px 151px;
@@ -1989,18 +1813,10 @@ form {
   .about_text {
     width: 1100px;
   }
-  .video_part {
-    right: -204px;
-    top: unset;
-  }
   .feedback_container {
     max-width: 1440px;
   }
   .video_tai {
-    right: 0;
-    top: 48%;
-    transform: translateX(-50%);
-    left: 50%;
     height: 350px;
     width: 650px;
   }
@@ -2017,17 +1833,9 @@ form {
     height: 350px;
     width: 650px;
     position: relative;
-    left: 50%;
-    right: unset;
   }
   .for_adapt_height {
-    padding: 70px 150px;
-  }
-  .wrapp_main_text {
-    margin-bottom: 420px;
-  }
-  .left_subtitle {
-    margin-bottom: 400px;
+    padding: 40px 150px;
   }
   .wrapp_about_product_down {
     padding: 0 160px;
