@@ -265,7 +265,6 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 30px;
 }
 .second_list {
   flex-wrap: wrap;
@@ -1009,6 +1008,9 @@ form {
   color: white;
   cursor: pointer;
 }
+.block_yin_top_page2 {
+  margin-bottom: 30px;
+}
 
 /* adapt */
 
@@ -1214,7 +1216,9 @@ form {
   }
   .block_yin {
     gap: 80px;
+    margin-bottom: 30px;
   }
+
   .block_yin > li > img {
     width: 70px;
     height: 70px;
