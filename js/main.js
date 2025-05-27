@@ -241,3 +241,14 @@ document.querySelectorAll(".lazy-video").forEach((video) => {
     video.appendChild(iframe);
   });
 });
+
+// Відкриття меню на фокусі
+
+const btnCourse = document.getElementById("btn_course");
+
+btnCourse.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    btnCourse.click();
+  }
+});
