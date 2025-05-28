@@ -475,7 +475,9 @@
   -ms-overflow-style: none;
   line-height: 1.5;
 }
-
+.background {
+  display: none;
+}
 .feedback::-webkit-scrollbar {
   display: none;
 }
@@ -737,11 +739,6 @@ form {
   background: linear-gradient(180deg, #ebcbb1 0%, #e4b186 49.57%);
   opacity: 0.39;
   z-index: -1;
-}
-.footer_logo {
-  width: 64px;
-  height: 64px;
-  display: none;
 }
 .info_block {
   font-family: var(--second_font);
@@ -1617,18 +1614,22 @@ form {
     padding: 0;
   }
   .left_block_form {
-    width: 720px;
-    padding: 150px 170px;
-    border-radius: 20px 0 0 20px;
+    width: 50%;
+    padding: 152px 170px;
+    border-radius: 20px 0 0 0;
   }
   .left_block_form::before {
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 0;
   }
   .right_block_form {
-    width: 720px;
+    width: 50%;
     max-width: unset;
-    padding: 26px 40px;
+    padding: 20px 40px;
     margin-bottom: 0;
+    border-radius: 0 0 20px 0;
+    position: relative;
+    bottom: -40px;
+    background: white;
   }
   #submit_form_btn {
     width: 206px;
@@ -1643,28 +1644,22 @@ form {
   }
   .right_block_form > p {
     text-align: center;
+    margin-bottom: 40px;
   }
   .last_right_deko {
     width: 154px;
     height: 432px;
     right: 0;
-    bottom: 400px;
+    bottom: 250px;
   }
   .footer_container {
     padding: 0;
   }
   .wrapp_footer {
-    padding: 46px 50px 50px 53px;
+    padding: 50px 50px 20px;
     flex-direction: row;
     position: relative;
     align-items: flex-start;
-  }
-  .footer_logo {
-    top: 4px;
-    left: 63px;
-    position: absolute;
-    z-index: 1;
-    display: block;
   }
   .line {
     width: 1px;
@@ -1746,7 +1741,7 @@ form {
     width: 1040px;
   }
   .main_test {
-    max-width: unset;
+    max-width: 1040px;
     min-width: unset;
     display: flex;
     flex-direction: column;
@@ -1817,9 +1812,9 @@ form {
   .about_text {
     width: 1100px;
   }
-  .feedback_container {
+  /* .feedback_container {
     max-width: 1440px;
-  }
+  } */
   .video_tai {
     height: 350px;
     width: 650px;
@@ -1858,6 +1853,14 @@ form {
   }
 }
 
+@media screen and (min-width: 1690px) {
+  .feedback_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1860px;
+  }
+}
 /* list animation */
 .anim-fade-in > li:nth-child(1) {
   animation-name: fadein;
