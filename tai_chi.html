@@ -64,8 +64,15 @@
           <picture class="hero-small-photo hidden-photo">
             <source
               media="(min-width: 1028px)"
+              type="image/webp"
+              srcset="./img/tai_chi_main_desctop.webp"
+            />
+            <source
+              media="(min-width: 1028px)"
+              type="image/jpeg"
               srcset="./img/tai_chi_main_desctop.jpg"
             />
+            <source type="image/webp" srcset="./img/tai_chi_main.webp" />
             <img
               class="hero-photo-small"
               src="./img/tai_chi_main.jpg"
@@ -162,13 +169,16 @@
 
       <section class="about_teacher_wrapp about_teacher_second">
         <div class="container teacher_container">
-          <img
-            class="teacher_img"
-            src="./img/Instructor.png"
-            alt="Instructor"
-            width="290"
-            height="265"
-          />
+          <picture>
+            <source srcset="./img/Instructor.webp" type="image/webp" />
+            <img
+              class="teacher_img"
+              src="./img/Instructor.png"
+              alt="Instructor"
+              width="290"
+              height="265"
+            />
+          </picture>
           <div class="wrapp_left_block_teacher">
             <h2>Хто викладач?</h2>
             <p class="name_teacher">
